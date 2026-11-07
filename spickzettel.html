@@ -1,0 +1,1264 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Deutsch-Spickzettel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one long reference page, sticky jump bar, gender-coded tables (der blue, die red, das green, plural violet). */
+:root{
+  --bg:#eef2ee; --surface:#ffffff; --ink:#182227; --muted:#51625f; --line:#d5ded6;
+  --accent:#1f7a6c; --accent-soft:#dcefe9; --warn:#b4531f; --warn-soft:#f8e6d6;
+  --m:#1f5fa8; --m-soft:#dce9f7; --f:#b83c27; --f-soft:#f8e1da;
+  --n:#2a7d4f; --n-soft:#dcf0e4; --p:#6e4fa0; --p-soft:#ece5f6;
+  --display:'Fraunces',Georgia,serif; --body:'Work Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101615; --surface:#161f1c; --ink:#e9efe9; --muted:#9fb0ab; --line:#28342f;
+    --accent:#57c2a9; --accent-soft:#173430; --warn:#f0925e; --warn-soft:#3a2416;
+    --m:#7db4ee; --m-soft:#1a2c42; --f:#f08f78; --f-soft:#3a201a;
+    --n:#6fcf97; --n-soft:#173a28; --p:#b79ae0; --p-soft:#2c2340; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101615; --surface:#161f1c; --ink:#e9efe9; --muted:#9fb0ab; --line:#28342f;
+  --accent:#57c2a9; --accent-soft:#173430; --warn:#f0925e; --warn-soft:#3a2416;
+  --m:#7db4ee; --m-soft:#1a2c42; --f:#f08f78; --f-soft:#3a201a;
+  --n:#6fcf97; --n-soft:#173a28; --p:#b79ae0; --p-soft:#2c2340; color-scheme:dark;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:15px; line-height:1.55; padding-inline:16px; padding-block:0 48px;}
+.wrap{max-width:900px; margin:0 auto;}
+h1,h2,h3{font-family:var(--display); font-weight:600; text-wrap:balance; margin:0;}
+h1{font-size:1.9rem; padding-top:24px;}
+.tag{color:var(--muted); margin:4px 0 14px;}
+nav.jump{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--bg); border-bottom:1px solid var(--line); display:flex; gap:6px; overflow-x:auto; padding-block:10px; scrollbar-width:thin;}
+nav.jump a{flex:0 0 auto; font-family:var(--mono); font-size:.72rem; font-weight:600; color:var(--ink); text-decoration:none; border:1px solid var(--line); background:var(--surface); border-radius:20px; padding:6px 12px; white-space:nowrap;}
+nav.jump a:hover,nav.jump a:focus-visible{border-color:var(--accent); color:var(--accent); outline:none;}
+section{padding-top:34px; scroll-margin-top:60px;}
+h2{font-size:1.4rem; padding-bottom:6px; border-bottom:2px solid var(--accent); margin-bottom:12px;}
+h3{font-size:1.02rem; margin:20px 0 6px;}
+p{margin:6px 0;}
+.lead{color:var(--muted);}
+.tw{overflow-x:auto; margin:8px 0 4px; border:1px solid var(--line); border-radius:10px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; min-width:430px; font-size:.9rem;}
+th,td{text-align:left; padding:7px 11px; border-bottom:1px solid var(--line); vertical-align:top;}
+tr:last-child td{border-bottom:none;}
+th{font-family:var(--mono); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); font-weight:600; white-space:nowrap;}
+td.k{font-weight:600; white-space:nowrap;}
+th.m,td.m{background:var(--m-soft); color:var(--m); font-weight:500;}
+th.f,td.f{background:var(--f-soft); color:var(--f); font-weight:500;}
+th.n,td.n{background:var(--n-soft); color:var(--n); font-weight:500;}
+th.p,td.p{background:var(--p-soft); color:var(--p); font-weight:500;}
+td b,li b{color:var(--accent);}
+td.m b,td.f b,td.n b,td.p b{color:inherit; text-decoration:underline; text-underline-offset:2px;}
+.note{background:var(--accent-soft); border-radius:10px; padding:10px 14px; margin:10px 0; font-size:.92rem;}
+.warn{background:var(--warn-soft); border-radius:10px; padding:10px 14px; margin:10px 0; font-size:.92rem;}
+.warn b{color:var(--warn);}
+ul{margin:6px 0; padding-left:20px;}
+li{margin-bottom:3px;}
+.ex{color:var(--muted);}
+.cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px;}
+.cols>*{min-width:0;}
+.mono{font-family:var(--mono); font-size:.86em;}
+footer{margin-top:40px; color:var(--muted); font-size:.8rem;}
+</style>
+
+<div class="wrap">
+<h1>Deutsch-Spickzettel</h1>
+<p class="tag">Alles, was wir bisher gelernt haben, an einem Ort. Farben: <span style="color:var(--m);font-weight:600">der</span> · <span style="color:var(--f);font-weight:600">die</span> · <span style="color:var(--n);font-weight:600">das</span> · <span style="color:var(--p);font-weight:600">Plural</span></p>
+
+<nav class="jump" aria-label="Abschnitte">
+  <a href="#landkarte">Landkarte</a>
+  <a href="#routine">Abendroutine</a>
+  <a href="#faelle">Artikel</a>
+  <a href="#adjektive">Adjektive</a>
+  <a href="#praep">Präpositionen</a>
+  <a href="#praepaz">Präpositionen A–Z</a>
+  <a href="#verben">Verben &amp; Fälle</a>
+  <a href="#verbliste">Verbliste</a>
+  <a href="#perfekt">Perfekt</a>
+  <a href="#praeteritum">Präteritum &amp; Präsens</a>
+  <a href="#pronomen">Pronomen</a>
+  <a href="#imperativ">Imperativ &amp; E-Mail</a>
+  <a href="#reflexiv">Reflexiv</a>
+  <a href="#genitiv">Genitiv</a>
+  <a href="#passiv">Passiv</a>
+  <a href="#konnektoren">wenn / als / ob</a>
+  <a href="#konjunktiv">Konjunktiv II</a>
+  <a href="#vergangenheit">Präteritum (alle)</a>
+  <a href="#konjpast">Konjunktiv II Vergangenheit</a>
+  <a href="#partikeln">Partikeln</a>
+  <a href="#b2">B2-Bausteine</a>
+  <a href="#uhrzeit">Uhrzeit</a>
+  <a href="#adverbien">Adverbien</a>
+  <a href="#textfragen">Textfragen</a>
+  <a href="#atome">Erklär-Atome</a>
+  <a href="#satzbau">Satzbau</a>
+  <a href="#relativ">Relativsätze</a>
+  <a href="#trennbar">Trennbare Verben</a>
+  <a href="#genus">Genus &amp; Plural</a>
+  <a href="#idiome">Idiome</a>
+  <a href="#reim">Merkreime</a>
+  <a href="#hoeren">Lieder &amp; Serien</a>
+  <a href="#phrasen">Redemittel</a>
+  <a href="#fallen">Stolpersteine</a>
+</nav>
+
+<!-- LANDKARTE -->
+<section id="landkarte">
+<h2>Grammatik-Landkarte</h2>
+<p class="lead">Alle Themen von A1 bis B2 sind einmal durch (Stand 25.10.2026). Die Logik-Themen festigen sich durch Benutzen, die Gedächtnis-Themen brauchen etwa einen Monat tägliche Wiederholung.</p>
+<div class="tw"><table>
+<tr><th>Thema</th><th>Art</th><th>Stand</th></tr>
+<tr><td class="k">Artikel &amp; Fälle, Adjektivendungen, Präpositionen</td><td>Logik + Gedächtnis</td><td>solide, täglicher Test</td></tr>
+<tr><td class="k">Perfekt, trennbare Verben, Wortstellung, Relativsätze</td><td>Logik</td><td>solide</td></tr>
+<tr><td class="k">Personalpronomen, Imperativ, Reflexiv, Genitiv, Passiv</td><td>Logik</td><td>kennengelernt, üben</td></tr>
+<tr><td class="k">wenn / als / ob, Konjunktiv II (auch Vergangenheit)</td><td>Logik</td><td>kennengelernt, üben</td></tr>
+<tr><td class="k">Modalpartikeln, n-Deklination, Partizip als Adjektiv, Konjunktiv I</td><td>Gefühl / B2</td><td>kennengelernt</td></tr>
+<tr><td class="k">unregelmäßige Verben (Präteritum, Partizip II)</td><td><b>Gedächtnis</b></td><td>täglich üben</td></tr>
+<tr><td class="k">Nomen: Genus &amp; Plural</td><td><b>Gedächtnis</b></td><td>täglich üben</td></tr>
+<tr><td class="k">Dativ-Verben, Verb + Präposition</td><td><b>Gedächtnis</b></td><td>täglich üben</td></tr>
+</table></div>
+</section>
+
+<!-- ABENDROUTINE -->
+<section id="routine">
+<h2>Abendroutine (jeden Tag oder alle zwei Tage)</h2>
+<p class="lead">Teil A: alle Grammatikthemen der Reihe nach, von einfach bis schwer. Du liest den Abschnitt im Spickzettel, dann gibt es 3 bis 4 Lücken. Teil B: du erzeugst selbst Deutsch.</p>
+<h3>Teil A: Stationen (Grundlagen zuerst)</h3>
+<div class="tw"><table>
+<tr><th>#</th><th>Station</th><th>Abschnitt</th></tr>
+<tr><td>1</td><td class="k">Artikel &amp; Fälle</td><td><a href="#faelle">Artikel</a></td></tr>
+<tr><td>2</td><td class="k">Personalpronomen</td><td><a href="#pronomen">Pronomen</a></td></tr>
+<tr><td>3</td><td class="k">Perfekt (haben / sein, Partizip II)</td><td><a href="#perfekt">Perfekt</a></td></tr>
+<tr><td>4</td><td class="k">Präsens &amp; Präteritum, starke Verben</td><td><a href="#praeteritum">Präteritum &amp; Präsens</a> · <a href="#vergangenheit">Präteritum (alle)</a></td></tr>
+<tr><td>5</td><td class="k">Trennbare &amp; reflexive Verben</td><td><a href="#trennbar">Trennbar</a> · <a href="#reflexiv">Reflexiv</a></td></tr>
+<tr><td>6</td><td class="k">Adjektivendungen &amp; Vergleiche</td><td><a href="#adjektive">Adjektive</a></td></tr>
+<tr><td>7</td><td class="k">Präpositionen (Fall, Bedeutung, Wechsel)</td><td><a href="#praep">Präpositionen</a> · <a href="#praepaz">A–Z</a></td></tr>
+<tr><td>8</td><td class="k">Verben &amp; Fälle (Dativ-Verben)</td><td><a href="#verben">Verben &amp; Fälle</a></td></tr>
+<tr><td>9</td><td class="k">Satzbau &amp; Konnektoren</td><td><a href="#satzbau">Satzbau</a> · <a href="#konnektoren">wenn / als / ob</a></td></tr>
+<tr><td>10</td><td class="k">Relativsätze</td><td><a href="#relativ">Relativsätze</a></td></tr>
+<tr><td>11</td><td class="k">Imperativ &amp; formale E-Mail</td><td><a href="#imperativ">Imperativ</a></td></tr>
+<tr><td>12</td><td class="k">Konjunktiv II (auch Vergangenheit)</td><td><a href="#konjunktiv">Konjunktiv II</a> · <a href="#konjpast">Vergangenheit</a></td></tr>
+<tr><td>13</td><td class="k">Passiv</td><td><a href="#passiv">Passiv</a></td></tr>
+<tr><td>14</td><td class="k">Genitiv</td><td><a href="#genitiv">Genitiv</a></td></tr>
+<tr><td>15</td><td class="k">B2-Bausteine</td><td><a href="#b2">B2-Bausteine</a></td></tr>
+</table></div>
+<h3>Teil B: Generieren (immer wechseln)</h3>
+<div class="tw"><table>
+<tr><th>Aufgabe</th><th>So geht es</th></tr>
+<tr><td class="k">Tag beschreiben</td><td>6 bis 8 Sätze über deinen Tag (Perfekt / Präteritum).</td></tr>
+<tr><td class="k">Schlüsselwörter</td><td>Ich gebe 5 Wörter, du baust Sätze damit.</td></tr>
+<tr><td class="k">Schreib-Block</td><td>Anschreiben, Lebenslauf, formale E-Mail.</td></tr>
+<tr><td class="k">Nacherzählung</td><td>Text oder Lied in eigenen Worten.</td></tr>
+<tr><td class="k">Spontan-Fragen</td><td>5 Fragen, sofort antworten.</td></tr>
+</table></div>
+<p class="ex">Dazu in jeder Session: neue Nomen und Verben (erst lehren, dann prüfen) und eine Fehlerliste für den nächsten Abend.</p>
+</section>
+
+<!-- ARTIKEL -->
+<section id="faelle">
+<h2>Artikel &amp; Fälle</h2>
+<p class="lead">Frag dich bei jedem Satz: <b>Wer/Was?</b> = Nominativ (Subjekt) · <b>Wen/Was?</b> = Akkusativ (direktes Objekt) · <b>Wem?</b> = Dativ (Person, die etwas bekommt oder der geholfen wird).</p>
+
+<h3>Bestimmter Artikel</h3>
+<div class="tw"><table>
+<tr><th></th><th class="m">der (m)</th><th class="f">die (f)</th><th class="n">das (n)</th><th class="p">die (Pl.)</th></tr>
+<tr><td class="k">Nominativ</td><td class="m">der</td><td class="f">die</td><td class="n">das</td><td class="p">die</td></tr>
+<tr><td class="k">Akkusativ</td><td class="m"><b>den</b></td><td class="f">die</td><td class="n">das</td><td class="p">die</td></tr>
+<tr><td class="k">Dativ</td><td class="m"><b>dem</b></td><td class="f"><b>der</b></td><td class="n"><b>dem</b></td><td class="p"><b>den</b> + Nomen auf -n</td></tr>
+</table></div>
+
+<h3>Unbestimmter Artikel (ein, mein, dein, kein ...)</h3>
+<div class="tw"><table>
+<tr><th></th><th class="m">m</th><th class="f">f</th><th class="n">n</th><th class="p">Plural (kein-)</th></tr>
+<tr><td class="k">Nominativ</td><td class="m">ein</td><td class="f">eine</td><td class="n">ein</td><td class="p">keine</td></tr>
+<tr><td class="k">Akkusativ</td><td class="m"><b>einen</b></td><td class="f">eine</td><td class="n">ein</td><td class="p">keine</td></tr>
+<tr><td class="k">Dativ</td><td class="m"><b>einem</b></td><td class="f"><b>einer</b></td><td class="n"><b>einem</b></td><td class="p"><b>keinen</b> + Nomen auf -n</td></tr>
+</table></div>
+
+<div class="note"><b>Merke:</b> Im Akkusativ ändert sich <b>nur maskulin</b> (der → den, ein → einen). Im Dativ endet der Artikel auf <b>-m</b> (m, n), <b>-r</b> (f), <b>-n</b> (Plural). Feminin im Dativ ist immer <b>der / einer / meiner</b>.</div>
+
+<h3>Welcher Fall? Der Entscheidungsweg</h3>
+<p class="lead">Der Fall steckt im <b>Verb</b> (oder in der Präposition), nicht im Nomen. Du kannst ihn nicht aus dem Nichts raten, aber du lernst Verben mit ihrem Muster, wie Nomen mit Artikel.</p>
+<div class="tw"><table>
+<tr><th>Schritt</th><th>Frage</th><th>Ergebnis</th></tr>
+<tr><td class="k">1</td><td>Steht das Verb auf der <b>Dativ-Liste</b>? (<a href="#verbliste">Verbliste</a>)</td><td>ja → die Person im <b>Dativ</b> (helfen, danken, gehören, gefallen, antworten ...)</td></tr>
+<tr><td class="k">2</td><td>Hat das Verb <b>zwei Objekte</b>? (geben, zeigen, schenken ...)</td><td><b>Person = Dativ</b>, <b>Sache = Akkusativ</b></td></tr>
+<tr><td class="k">3</td><td>sonst</td><td><b>Akkusativ</b> ist der Standard (besuchen, sehen, treffen, lesen ...)</td></tr>
+<tr><td class="k">4</td><td>Gibt es eine <b>Wechselpräposition</b>?</td><td><b>Wo?</b> → Dativ · <b>Wohin?</b> → Akkusativ</td></tr>
+<tr><td class="k">5</td><td>Verb + Präposition als <b>festes Paar</b>?</td><td>als Paar lernen: <i>denken an</i> + Akk, <i>arbeiten an</i> + Dat</td></tr>
+</table></div>
+<div class="note"><b>Test:</b> <i>Wem?</i> → Dativ · <i>Wen / Was?</i> → Akkusativ. <b>Faustregel:</b> Dativ = die Person bekommt, profitiert oder wird angesprochen. Akkusativ = die Person wird direkt getroffen. Wenn du ein Verb nicht kennst, rate Akkusativ. Ohr-Check mit Pronomen: <i>Ich helfe <b>ihm</b></i> klingt richtig, <i>Ich helfe <b>ihn</b></i> klingt falsch.</div>
+<p class="ex">Das Angebot gefällt <b>dem Kind</b> nicht (gefallen = Dativ, das Angebot ist das Subjekt). · Ich danke <b>den Studenten</b>. · Wir besuchen <b>den Vortrag</b>.</p>
+</section>
+
+<!-- ADJEKTIVE -->
+<section id="adjektive">
+<h2>Adjektivendungen &amp; Vergleiche</h2>
+<p class="lead">Vor einem Nomen hat ein Adjektiv <b>immer</b> eine Endung (ein klein<b>er</b> Hund). Nach <i>sein/werden</i> nie (Der Hund ist klein). Logik: Jedes Wort vor dem Nomen muss den Fall einmal zeigen. Zeigt der Artikel ihn nicht (ein), zeigt ihn das Adjektiv (-er, -es).</p>
+
+<h3>Nach der / die / das (bestimmter Artikel)</h3>
+<div class="tw"><table>
+<tr><th></th><th class="m">m</th><th class="f">f</th><th class="n">n</th><th class="p">Plural</th></tr>
+<tr><td class="k">Nominativ</td><td class="m">der groß<b>e</b> Hund</td><td class="f">die groß<b>e</b> Frau</td><td class="n">das groß<b>e</b> Kind</td><td class="p">die groß<b>en</b> Hunde</td></tr>
+<tr><td class="k">Akkusativ</td><td class="m">den groß<b>en</b> Hund</td><td class="f">die groß<b>e</b> Frau</td><td class="n">das groß<b>e</b> Kind</td><td class="p">die groß<b>en</b> Hunde</td></tr>
+<tr><td class="k">Dativ</td><td class="m">dem groß<b>en</b> Hund</td><td class="f">der groß<b>en</b> Frau</td><td class="n">dem groß<b>en</b> Kind</td><td class="p">den groß<b>en</b> Hunden</td></tr>
+</table></div>
+
+<h3>Nach ein / mein / kein</h3>
+<div class="tw"><table>
+<tr><th></th><th class="m">m</th><th class="f">f</th><th class="n">n</th><th class="p">Plural</th></tr>
+<tr><td class="k">Nominativ</td><td class="m">ein groß<b>er</b> Hund</td><td class="f">eine groß<b>e</b> Frau</td><td class="n">ein groß<b>es</b> Kind</td><td class="p">keine groß<b>en</b> Hunde</td></tr>
+<tr><td class="k">Akkusativ</td><td class="m">einen groß<b>en</b> Hund</td><td class="f">eine groß<b>e</b> Frau</td><td class="n">ein groß<b>es</b> Kind</td><td class="p">keine groß<b>en</b> Hunde</td></tr>
+<tr><td class="k">Dativ</td><td class="m">einem groß<b>en</b> Hund</td><td class="f">einer groß<b>en</b> Frau</td><td class="n">einem groß<b>en</b> Kind</td><td class="p">keinen groß<b>en</b> Hunden</td></tr>
+</table></div>
+
+<h3>Ohne Artikel</h3>
+<div class="tw"><table>
+<tr><th></th><th class="m">m</th><th class="f">f</th><th class="n">n</th><th class="p">Plural</th></tr>
+<tr><td class="k">Nominativ</td><td class="m">frisch<b>er</b> Kaffee</td><td class="f">frisch<b>e</b> Milch</td><td class="n">frisch<b>es</b> Wasser</td><td class="p">verschieden<b>e</b> Dinge</td></tr>
+<tr><td class="k">Akkusativ</td><td class="m">frisch<b>en</b> Kaffee</td><td class="f">frisch<b>e</b> Milch</td><td class="n">frisch<b>es</b> Wasser</td><td class="p">verschieden<b>e</b> Dinge</td></tr>
+<tr><td class="k">Dativ</td><td class="m">mit frisch<b>em</b> Kaffee</td><td class="f">mit frisch<b>er</b> Milch</td><td class="n">mit frisch<b>em</b> Wasser</td><td class="p">mit verschieden<b>en</b> Dingen</td></tr>
+</table></div>
+
+<div class="note"><b>Kurzregel:</b> Dativ mit Artikel = immer <b>-en</b>. Hat der Artikel schon eine Endung (einen, einem, einer), nimmt das Adjektiv <b>-en / -e</b>. Steht „ein" nackt da, nimmt es <b>-er / -es</b>.</div>
+
+<h3>Vergleichen</h3>
+<div class="tw"><table>
+<tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th><th>Hinweis</th></tr>
+<tr><td>schnell</td><td>schnell<b>er</b></td><td>am schnell<b>sten</b></td><td>regelmäßig</td></tr>
+<tr><td>groß</td><td>gr<b>ö</b>ßer</td><td>am gr<b>ö</b>ßten</td><td>Umlaut</td></tr>
+<tr><td>alt / jung / kurz</td><td>älter / jünger / kürzer</td><td>am ältesten / jüngsten / kürzesten</td><td>Umlaut bei a, o, u</td></tr>
+<tr><td>gut</td><td>besser</td><td>am besten</td><td>unregelmäßig</td></tr>
+<tr><td>viel</td><td>mehr</td><td>am meisten</td><td>unregelmäßig</td></tr>
+<tr><td>gern</td><td>lieber</td><td>am liebsten</td><td>unregelmäßig</td></tr>
+</table></div>
+<p>Kaffee ist besser <b>als</b> Tee. · Kaffee ist <b>genauso</b> wichtig <b>wie</b> Schlaf.</p>
+</section>
+
+<!-- PRÄPOSITIONEN -->
+<section id="praep">
+<h2>Präpositionen</h2>
+
+<h3>Wechselpräpositionen: Wo? oder Wohin?</h3>
+<div class="note"><b>Wo?</b> (Position, kein Ortswechsel) → <b>Dativ</b> &nbsp;·&nbsp; <b>Wohin?</b> (Bewegung, Richtung) → <b>Akkusativ</b></div>
+<div class="tw"><table>
+<tr><th>Präposition</th><th>Bedeutung</th><th>Wo? (Dativ)</th><th>Wohin? (Akkusativ)</th></tr>
+<tr><td class="k">in</td><td>in, hinein (Raum, Behälter)</td><td>Ich bin <b>in der</b> Küche.</td><td>Ich gehe <b>in die</b> Küche.</td></tr>
+<tr><td class="k">auf</td><td>auf (Fläche)</td><td>Das Buch liegt <b>auf dem</b> Tisch.</td><td>Ich lege das Buch <b>auf den</b> Tisch.</td></tr>
+<tr><td class="k">an</td><td>an (Kontakt, Wand, Rand)</td><td>Das Bild hängt <b>an der</b> Wand.</td><td>Ich hänge das Bild <b>an die</b> Wand.</td></tr>
+<tr><td class="k">über</td><td>über, oberhalb</td><td>Die Lampe hängt <b>über dem</b> Tisch.</td><td>Ich hänge die Lampe <b>über den</b> Tisch.</td></tr>
+<tr><td class="k">unter</td><td>unter</td><td>Der Hund liegt <b>unter dem</b> Tisch.</td><td>Der Hund läuft <b>unter den</b> Tisch.</td></tr>
+<tr><td class="k">vor</td><td>vor</td><td>Die Schuhe stehen <b>vor der</b> Tür.</td><td>Ich stelle die Schuhe <b>vor die</b> Tür.</td></tr>
+<tr><td class="k">hinter</td><td>hinter</td><td>Das Fahrrad steht <b>hinter dem</b> Haus.</td><td>Ich stelle das Fahrrad <b>hinter das</b> Haus.</td></tr>
+<tr><td class="k">neben</td><td>neben</td><td>Der Stuhl steht <b>neben dem</b> Tisch.</td><td>Ich stelle den Stuhl <b>neben den</b> Tisch.</td></tr>
+<tr><td class="k">zwischen</td><td>zwischen</td><td>Der Ball liegt <b>zwischen den</b> Bäumen.</td><td>Der Ball rollt <b>zwischen die</b> Bäume.</td></tr>
+</table></div>
+
+<div class="note"><b>Welche Präposition?</b> <b>in</b> = geschlossener Raum oder Behälter (Küche, Schublade, Kühlschrank, Tasche, Regal) · <b>auf</b> = offene Fläche (Tisch, Boden) · <b>an</b> = Kontakt, Wand, Rand (an der Wand, am Tisch sitzen).</div>
+
+<h3>Verbpaare: Bewegung oder Position</h3>
+<div class="tw"><table>
+<tr><th>Bewegung → Akkusativ</th><th>Position → Dativ</th></tr>
+<tr><td>legen (flach hinlegen)</td><td>liegen</td></tr>
+<tr><td>stellen (aufrecht hinstellen)</td><td>stehen</td></tr>
+<tr><td>(sich) setzen</td><td>sitzen</td></tr>
+<tr><td>hängen (aufhängen)</td><td>hängen (hängt)</td></tr>
+<tr><td>gehen, kommen, fahren, laufen</td><td>sein, bleiben</td></tr>
+</table></div>
+
+<div class="cols">
+<div>
+<h3>Immer Akkusativ</h3>
+<div class="tw"><table>
+<tr><td class="k">für</td><td>for</td></tr>
+<tr><td class="k">ohne</td><td>without</td></tr>
+<tr><td class="k">um</td><td>around, at (Uhrzeit)</td></tr>
+<tr><td class="k">gegen</td><td>against</td></tr>
+<tr><td class="k">durch</td><td>through</td></tr>
+</table></div>
+<p class="ex">Das Geschenk ist für meine Freundin.</p>
+</div>
+<div>
+<h3>Immer Dativ</h3>
+<div class="tw"><table>
+<tr><td class="k">mit</td><td>with</td></tr>
+<tr><td class="k">nach</td><td>after, to (Städte)</td></tr>
+<tr><td class="k">bei</td><td>at, near, at someone's</td></tr>
+<tr><td class="k">von</td><td>from, of</td></tr>
+<tr><td class="k">zu</td><td>to</td></tr>
+<tr><td class="k">aus</td><td>out of, from</td></tr>
+</table></div>
+<p class="ex">Ich fahre mit dem Bus nach Köln.</p>
+</div>
+</div>
+
+<h3>Kontraktionen</h3>
+<div class="tw"><table>
+<tr><th>Form</th><th>Beispiel</th></tr>
+<tr><td class="k">in dem = im · in das = ins</td><td>im Park · ins Regal</td></tr>
+<tr><td class="k">an dem = am · an das = ans</td><td>am Tisch · am Montag</td></tr>
+<tr><td class="k">bei dem = beim · von dem = vom</td><td>beim Arzt · vom Bus</td></tr>
+<tr><td class="k">zu dem = zum · zu der = zur</td><td>zum Park · zur Uni</td></tr>
+</table></div>
+<p><b>Auch Akkusativ:</b> ins, ans, aufs, fürs, durchs, ums. <b>Sehr locker gesprochen:</b> mitm Bus, aufm Tisch, aus'm Haus, übern Tisch. <b>außerdem</b> (ein Wort, = besides) ist etwas anderes als <b>außer dem</b> (zwei Wörter, = except the).</p>
+<p><b>Keine</b> Kontraktion bei über, unter, vor, hinter, neben, zwischen (hinter dem Haus). Zeit und Ort: <b>im</b> September, <b>am</b> Montag, <b>um</b> 7 Uhr, <b>nach</b> Köln.</p>
+
+<h3>da- und wo-Wörter (nur für Sachen)</h3>
+<div class="tw"><table>
+<tr><th>Antwort (da-)</th><th>Frage (wo-)</th><th>Beispiel</th></tr>
+<tr><td>darauf / drauf</td><td>worauf</td><td>Ich warte <b>darauf</b>. · <b>Worauf</b> wartest du?</td></tr>
+<tr><td>darin / drin</td><td>worin</td><td>Der Stift ist <b>drin</b>.</td></tr>
+<tr><td>daran</td><td>woran</td><td><b>Woran</b> denkst du? (Person: <i>An wen</i>?)</td></tr>
+<tr><td>darüber · damit · dafür</td><td>worüber · womit · wofür</td><td><b>Worüber</b> sprecht ihr?</td></tr>
+</table></div>
+<p>Vor Vokal wird da- zu <b>dar-</b>. Bei Personen bleibt die normale Form: <i>auf ihn warten</i>.</p>
+<h3>Gesprochen: drin, dran, drauf ...</h3>
+<div class="tw"><table>
+<tr><th>Schriftlich</th><th>Gesprochen</th><th>Beispiel</th></tr>
+<tr><td>darin</td><td><b>drin</b></td><td>Der Schlüssel liegt in der Tasche. → Er liegt <b>drin</b>.</td></tr>
+<tr><td>darauf</td><td><b>drauf</b></td><td>Ich warte auf die Antwort. → Ich warte <b>drauf</b>.</td></tr>
+<tr><td>daran</td><td><b>dran</b></td><td>Ich denke an die Prüfung. → Ich denke <b>dran</b>.</td></tr>
+<tr><td>darüber</td><td><b>drüber</b></td><td>Wir sprechen <b>drüber</b>.</td></tr>
+<tr><td>darunter</td><td><b>drunter</b></td><td>Die Katze liegt <b>drunter</b>.</td></tr>
+<tr><td>daraus</td><td><b>draus</b></td><td><b>Draus</b> wird nichts.</td></tr>
+</table></div>
+<p class="ex">Feste Wendungen: <b>Wer ist dran?</b> / Ich bin dran (= an der Reihe) · <b>Ich bin gut drauf.</b> (gute Laune) · <b>Was ist drin?</b> · <b>Das ist nicht drin.</b> (nicht möglich). Nur für Sachen, nicht für Personen.</p>
+</section>
+
+<!-- PRÄPOSITIONEN A-Z -->
+<section id="praepaz">
+<h2>Präpositionen A–Z: Bedeutung &amp; Fall</h2>
+<p class="lead">Tägliches Drill: erst den Fall, dann die Bedeutung, dann einen Satz sagen.</p>
+<h3>Akkusativ</h3>
+<div class="tw"><table>
+<tr><th>Präposition</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td class="k">bis</td><td>until, up to</td><td>Ich warte bis morgen. · bis Köln</td></tr>
+<tr><td class="k">durch</td><td>through</td><td>Wir gehen durch den Park.</td></tr>
+<tr><td class="k">für</td><td>for</td><td>Das Geschenk ist für meinen Bruder.</td></tr>
+<tr><td class="k">gegen</td><td>against; around (Uhrzeit)</td><td>gegen die Wand · gegen 9 Uhr</td></tr>
+<tr><td class="k">ohne</td><td>without</td><td>Ich trinke Kaffee ohne Zucker.</td></tr>
+<tr><td class="k">um</td><td>around; at (Uhrzeit)</td><td>um den Tisch · um 9 Uhr</td></tr>
+<tr><td class="k">entlang</td><td>along (nach dem Nomen)</td><td>den Fluss entlang</td></tr>
+</table></div>
+<h3>Dativ</h3>
+<div class="tw"><table>
+<tr><th>Präposition</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td class="k">ab</td><td>from (on)</td><td>ab Montag</td></tr>
+<tr><td class="k">aus</td><td>out of; from (Herkunft)</td><td>aus der Tasche · aus Indien</td></tr>
+<tr><td class="k">außer</td><td>except, besides</td><td>Außer dem Chef sind alle da.</td></tr>
+<tr><td class="k">bei</td><td>at, near, at someone's place</td><td>beim Arzt · bei mir</td></tr>
+<tr><td class="k">gegenüber</td><td>opposite</td><td>der Bank gegenüber</td></tr>
+<tr><td class="k">mit</td><td>with; by (Mittel)</td><td>mit dem Bus</td></tr>
+<tr><td class="k">nach</td><td>after; to (Städte, Länder)</td><td>nach dem Essen · nach Köln</td></tr>
+<tr><td class="k">seit</td><td>since, for (bis jetzt)</td><td>seit einem Jahr</td></tr>
+<tr><td class="k">von</td><td>from, of, by</td><td>von dir · von Montag bis Freitag</td></tr>
+<tr><td class="k">zu</td><td>to (zu Personen, Orten)</td><td>zum Arzt · zur Uni</td></tr>
+</table></div>
+<h3>Wechselpräpositionen (Wo? Dativ · Wohin? Akkusativ)</h3>
+<div class="tw"><table>
+<tr><th>Präposition</th><th>Bedeutung</th></tr>
+<tr><td class="k">an</td><td>at, on (Kontakt, Wand, Rand)</td></tr>
+<tr><td class="k">auf</td><td>on (Fläche)</td></tr>
+<tr><td class="k">hinter</td><td>behind</td></tr>
+<tr><td class="k">in</td><td>in, into (Raum, Behälter)</td></tr>
+<tr><td class="k">neben</td><td>next to</td></tr>
+<tr><td class="k">über</td><td>over, above; about (Thema → Akkusativ)</td></tr>
+<tr><td class="k">unter</td><td>under; among</td></tr>
+<tr><td class="k">vor</td><td>in front of; ago (zeitlich, Dativ)</td></tr>
+<tr><td class="k">zwischen</td><td>between</td></tr>
+</table></div>
+<h3>Genitiv</h3>
+<div class="tw"><table>
+<tr><th>Präposition</th><th>Bedeutung</th></tr>
+<tr><td class="k">wegen</td><td>because of</td></tr>
+<tr><td class="k">trotz</td><td>despite</td></tr>
+<tr><td class="k">während</td><td>during</td></tr>
+<tr><td class="k">statt / anstatt</td><td>instead of</td></tr>
+<tr><td class="k">innerhalb / außerhalb</td><td>within / outside of</td></tr>
+<tr><td class="k">aufgrund</td><td>due to</td></tr>
+</table></div>
+<h3>Zeit: seit, vor, für, in</h3>
+<div class="tw"><table>
+<tr><th>Wort</th><th>Fall</th><th>Beispiel</th></tr>
+<tr><td class="k">seit</td><td>Dativ</td><td>Ich lerne seit einem Monat Deutsch. (since / for, bis jetzt)</td></tr>
+<tr><td class="k">vor</td><td>Dativ</td><td>vor einer Woche (a week ago)</td></tr>
+<tr><td class="k">für</td><td>Akkusativ</td><td>für zwei Jahre (geplante Dauer)</td></tr>
+<tr><td class="k">in</td><td>Dativ</td><td>in zwei Tagen (in two days)</td></tr>
+</table></div>
+</section>
+
+<!-- VERBEN -->
+<section id="verben">
+<h2>Verben &amp; Fälle</h2>
+<p class="lead">Standard: Akkusativ (sehen, kaufen, besuchen, brauchen, kennen, lesen). Eine feste, kurze Liste verlangt den <b>Dativ</b>.</p>
+
+<h3>Dativ-Verben</h3>
+<div class="tw"><table>
+<tr><th>Verb</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td class="k">helfen</td><td>to help</td><td>Ich helfe <b>dem</b> Mann.</td></tr>
+<tr><td class="k">danken</td><td>to thank</td><td>Ich danke <b>der</b> Frau.</td></tr>
+<tr><td class="k">gehören</td><td>to belong to</td><td>Das gehört <b>dem</b> Kind.</td></tr>
+<tr><td class="k">gefallen</td><td>to please</td><td>Das gefällt <b>meiner</b> Freundin.</td></tr>
+<tr><td class="k">schmecken</td><td>to taste good (to)</td><td>Das schmeckt <b>dem</b> Kind.</td></tr>
+<tr><td class="k">glauben</td><td>to believe (a person)</td><td>Ich glaube <b>dem</b> Mann nicht.</td></tr>
+<tr><td class="k">folgen</td><td>to follow</td><td>Ich folge <b>dem</b> Mann. (Perfekt mit sein)</td></tr>
+<tr><td class="k">antworten</td><td>to answer</td><td>Ich antworte <b>der</b> Lehrerin.</td></tr>
+<tr><td class="k">gratulieren</td><td>to congratulate</td><td>Ich gratuliere <b>den</b> Kindern.</td></tr>
+<tr><td class="k">vertrauen</td><td>to trust</td><td>Ich vertraue <b>einem</b> Arzt.</td></tr>
+<tr><td class="k">passen</td><td>to suit, fit</td><td>Der Termin passt <b>mir</b> nicht.</td></tr>
+<tr><td class="k">fehlen</td><td>to be missing</td><td><b>Mir</b> fehlt Zeit.</td></tr>
+<tr><td class="k">zuhören</td><td>to listen to</td><td>Ich höre <b>dir</b> zu.</td></tr>
+<tr><td class="k">zustimmen</td><td>to agree with</td><td>Ich stimme <b>dir</b> zu.</td></tr>
+<tr><td class="k">begegnen</td><td>to meet by chance</td><td>Ich bin <b>ihm</b> begegnet. (sein)</td></tr>
+<tr><td class="k">einfallen</td><td>to occur to</td><td>Das Wort fällt <b>mir</b> nicht ein.</td></tr>
+<tr><td class="k">gelingen</td><td>to succeed</td><td>Es gelingt <b>mir</b>. (sein)</td></tr>
+<tr><td class="k">ähneln</td><td>to resemble</td><td>Sie ähnelt <b>ihrer</b> Mutter.</td></tr>
+<tr><td class="k">leidtun / wehtun</td><td>to be sorry / to hurt</td><td>Es tut <b>mir</b> leid. · Der Kopf tut <b>mir</b> weh.</td></tr>
+<tr><td class="k" colspan="3">Schreibweise im Wörterbuch: <b>jdm.</b> = jemandem (Dativ) · <b>jdn.</b> = jemanden (Akkusativ) · <b>etw.</b> = etwas. Unbekanntes Verb: rate Akkusativ.</td></tr>
+</table></div>
+<p class="ex">Eselsbrücke: Hilfe, Dank, Besitz, Meinung, Gefolgschaft: die Person steht im Dativ.</p>
+
+<h3>Beide Objekte: Person = Dativ, Sache = Akkusativ</h3>
+<p>geben, zeigen, schicken, schenken, bringen: Ich gebe <b>der Frau</b> (wem?) <b>den Stift</b> (was?).</p>
+
+<h3>Feste Verb + Präposition (Akkusativ oder Dativ, als Paar lernen)</h3>
+<div class="tw"><table>
+<tr><td class="k">denken an</td><td>Ich denke <b>an eine</b> Frau.</td></tr>
+<tr><td class="k">glauben an</td><td>Ich glaube nicht <b>an mich</b>.</td></tr>
+<tr><td class="k">sich erinnern an</td><td>Ich erinnere <b>mich an das</b> Highlight.</td></tr>
+<tr><td class="k">warten auf</td><td>Ich warte <b>auf die</b> Ergebnisse.</td></tr>
+<tr><td class="k">sich interessieren für</td><td>Er interessiert sich <b>für</b> Physik.</td></tr>
+<tr><td class="k">sprechen / nachdenken / sich beschweren über</td><td>Wir sprechen <b>über das</b> Projekt.</td></tr>
+<tr><td class="k">sich bewerben um / auf</td><td>Ich bewerbe mich <b>auf die</b> Stelle.</td></tr>
+<tr><td class="k" colspan="2"><b>Dativ:</b></td></tr>
+<tr><td class="k">teilnehmen an · arbeiten an</td><td>Er nahm <b>an der</b> Besprechung teil. · Ich arbeite <b>an einem</b> Projekt.</td></tr>
+<tr><td class="k">träumen von · abhängen von</td><td>Es hängt <b>von dir</b> ab.</td></tr>
+<tr><td class="k">suchen nach · fragen nach</td><td>Ich suche <b>nach einer</b> Ausgabe.</td></tr>
+<tr><td class="k">sprechen mit · bestehen aus</td><td>Ich spreche <b>mit dem</b> Chef. · Das besteht <b>aus</b> drei Teilen.</td></tr>
+</table></div>
+</section>
+
+<!-- VERBLISTE -->
+<section id="verbliste">
+<h2>Verbliste: Dativ, Akkusativ, beides</h2>
+<p class="lead">jdm. = jemandem (Dativ) · jdn. = jemanden (Akkusativ) · etw. = etwas. Lerne jedes Verb mit seinem Muster.</p>
+<h3>Nur Dativ</h3>
+<div class="tw"><table>
+<tr><th>Verb</th><th>Beispiel</th></tr>
+<tr><td class="k">helfen</td><td>Ich helfe <b>dem Mann</b>.</td></tr>
+<tr><td class="k">danken</td><td>Ich danke <b>den Studenten</b>.</td></tr>
+<tr><td class="k">gehören</td><td>Das gehört <b>dem Kind</b>.</td></tr>
+<tr><td class="k">gefallen · schmecken</td><td>Das Angebot gefällt <b>mir</b>. · Das Essen schmeckt <b>uns</b>.</td></tr>
+<tr><td class="k">glauben (einer Person) · vertrauen</td><td>Ich glaube <b>dem Kollegen</b>. · Ich vertraue <b>ihm</b>.</td></tr>
+<tr><td class="k">folgen · antworten · gratulieren</td><td>Ich folge <b>dem Weg</b>. · Er antwortet <b>dem Lehrer</b>. · Ich gratuliere <b>dir</b>.</td></tr>
+<tr><td class="k">passen · fehlen</td><td>Der Termin passt <b>mir</b>. · <b>Mir</b> fehlt Zeit.</td></tr>
+<tr><td class="k">zuhören · zustimmen · widersprechen</td><td>Ich höre <b>dir</b> zu. · Ich stimme <b>dir</b> zu.</td></tr>
+<tr><td class="k">begegnen · einfallen · gelingen · ähneln</td><td>Ich bin <b>ihm</b> begegnet. · Das Wort fällt <b>mir</b> nicht ein. · Es gelingt <b>mir</b>.</td></tr>
+<tr><td class="k">leidtun · wehtun · raten · drohen · nützen · schaden · dienen</td><td>Es tut <b>mir</b> leid. · Das nützt <b>dir</b>.</td></tr>
+</table></div>
+<h3>Nur Akkusativ (die Mehrheit)</h3>
+<div class="tw"><table>
+<tr><th>Gruppe</th><th>Verben</th></tr>
+<tr><td class="k">Wahrnehmen, Wissen</td><td>sehen, hören, kennen, verstehen, vergessen, finden, suchen, vermissen</td></tr>
+<tr><td class="k">Treffen, Kontakt</td><td>besuchen, treffen, anrufen, einladen, fragen (Person), begleiten, unterstützen, lieben, mögen</td></tr>
+<tr><td class="k">Haben, Tun</td><td>haben, brauchen, machen, nehmen, holen, bringen, kaufen, bestellen, bezahlen, benutzen, essen, trinken</td></tr>
+<tr><td class="k">Arbeit, Uni</td><td>lesen, schreiben, lernen, sammeln, einreichen, vorbereiten, erledigen, unterschreiben, beantworten, prüfen</td></tr>
+</table></div>
+<p class="ex">Ich besuche <b>den Vortrag</b>. · Ich rufe <b>dich</b> an. · Ich beantworte <b>die Frage</b>.</p>
+<h3>Dativ + Akkusativ</h3>
+<div class="tw"><table>
+<tr><th>Verb</th><th>Beispiel</th></tr>
+<tr><td class="k">geben · zeigen</td><td>Ich gebe <b>dem Chef die Rechnung</b>. · Ich zeige <b>der Kollegin die Unterlagen</b>.</td></tr>
+<tr><td class="k">schicken · schenken · bringen · leihen</td><td>Ich schenke <b>meiner Freundin ein Buch</b>.</td></tr>
+<tr><td class="k">erklären · sagen · erzählen · empfehlen</td><td>Sie erklärt <b>mir die Regel</b>.</td></tr>
+<tr><td class="k">anbieten · verkaufen · beibringen · mitbringen</td><td>Er bringt <b>mir Deutsch</b> bei.</td></tr>
+<tr><td class="k">erlauben · verbieten · verzeihen · wünschen</td><td>Ich wünsche <b>dir viel Glück</b>.</td></tr>
+</table></div>
+<div class="note"><b>Faustregel:</b> <b>Dativ</b> = die Person bekommt, profitiert oder wird angesprochen (to / for whom: geben, zeigen, helfen, danken, erklären). <b>Akkusativ</b> = die Person wird direkt getroffen (besuchen, treffen, sehen, anrufen, einladen, lieben). <b>Ausnahmen (Person = Akkusativ):</b> unterstützen, begleiten, einladen, beraten, informieren, fragen, bitten. Aber <b>antworten</b> = Dativ.</div>
+<div class="note"><b>Verwechslungs-Paare:</b> antworten (Dativ) ↔ beantworten (Akkusativ): <i>Ich antworte dir. Ich beantworte die Frage.</i> · folgen (Dativ) ↔ verfolgen (Akkusativ) · helfen (Dativ) ↔ unterstützen (Akkusativ).</div>
+</section>
+
+<!-- PERFEKT -->
+<section id="perfekt">
+<h2>Perfekt</h2>
+<p class="lead">Hilfsverb (<b>Präsens</b> von haben/sein) + <b>Partizip II</b> am Satzende. Im Deutschen heißt das meist: simple past (Er ist gestern angekommen = He arrived yesterday).</p>
+
+<div class="tw"><table>
+<tr><th></th><th>haben</th><th>sein</th></tr>
+<tr><td class="k">ich</td><td>habe</td><td>bin</td></tr>
+<tr><td class="k">du</td><td>hast</td><td>bist</td></tr>
+<tr><td class="k">er / sie / es</td><td>hat</td><td>ist</td></tr>
+<tr><td class="k">wir</td><td>haben</td><td>sind</td></tr>
+<tr><td class="k">ihr</td><td>habt</td><td>seid</td></tr>
+<tr><td class="k">sie / Sie</td><td>haben</td><td>sind</td></tr>
+</table></div>
+
+<div class="note"><b>sein</b> bei Ortswechsel (gehen, kommen, fahren, laufen, ankommen, mitkommen) oder Zustandswechsel (aufstehen, aufwachen, einschlafen, werden), plus <b>bleiben</b> und <b>sein</b>. Sonst <b>haben</b>. Frag dich: Ändert sich der Ort oder der Zustand?</div>
+<div class="warn"><b>Falle:</b> <i>war / waren + Partizip</i> (wir waren aufgestanden) ist Plusquamperfekt, nicht Perfekt. Für Perfekt: <i>wir sind aufgestanden</i>.</div>
+
+<h3>Partizip II bilden</h3>
+<div class="tw"><table>
+<tr><th>Typ</th><th>Muster</th><th>Beispiele</th></tr>
+<tr><td class="k">regelmäßig</td><td>ge + Stamm + <b>t</b></td><td>gemacht, gekauft, geschenkt, gefolgt (sein)</td></tr>
+<tr><td class="k">unregelmäßig</td><td>ge + (Stamm) + <b>en</b></td><td>gesehen, gegessen, getrunken, gelesen, geschrieben, geschlafen, gesprochen, geholfen, getroffen; mit sein: gegangen, gefahren, gelaufen, geblieben, geworden</td></tr>
+<tr><td class="k">gemischt</td><td>ge + neuer Stamm + t</td><td>gebracht, gewusst, gekannt, gedacht</td></tr>
+<tr><td class="k">trennbar</td><td>Vorsilbe + <b>ge</b> + Stamm</td><td>aufgestanden, eingekauft, angerufen, mitgebracht, eingeladen, aufgewacht, angekommen, eingeschlafen, mitgekommen</td></tr>
+<tr><td class="k">untrennbar</td><td><b>kein ge</b></td><td>verstanden, besucht, erklärt, entdeckt, bestanden, verpasst, verloren, vergessen</td></tr>
+</table></div>
+<p class="ex">Ich habe meiner Freundin ein Buch geschenkt. · Wir sind gestern in den Park gegangen. · Sie hat den Test bestanden.</p>
+
+<h3>Trennbare Verben im Perfekt</h3>
+<div class="tw"><table>
+<tr><th>Verb</th><th>Perfekt</th><th>Hinweis</th></tr>
+<tr><td class="k">aufstehen</td><td>ist <b>auf</b>gestanden</td><td>sein (Zustandswechsel)</td></tr>
+<tr><td class="k">anrufen</td><td>hat <b>an</b>gerufen</td><td>haben</td></tr>
+<tr><td class="k">umziehen</td><td>ist <b>um</b>gezogen</td><td>sein (Ortswechsel) · ziehen – zog – <b>gezogen</b></td></tr>
+<tr><td class="k">ankommen</td><td>ist <b>an</b>gekommen</td><td>sein</td></tr>
+<tr><td class="k">aufwachen · einschlafen</td><td>ist <b>auf</b>gewacht · ist <b>ein</b>geschlafen</td><td>sein</td></tr>
+<tr><td class="k">einladen · einkaufen</td><td>hat <b>ein</b>geladen · hat <b>ein</b>gekauft</td><td>haben</td></tr>
+<tr><td class="k">mitnehmen · teilnehmen</td><td>hat <b>mit</b>genommen · hat <b>teil</b>genommen</td><td>nehmen – nahm – genommen</td></tr>
+<tr><td class="k">absagen · einreichen</td><td>hat <b>ab</b>gesagt · hat <b>ein</b>gereicht</td><td>haben</td></tr>
+<tr><td class="k">vorbereiten</td><td>hat <b>vor</b>bereitet</td><td><b>kein ge</b>: be- ist untrennbar</td></tr>
+</table></div>
+<p><b>Regel:</b> Vorsilbe + <b>ge</b> + Partizip des Grundverbs (<i>um + gezogen</i>). Beginnt das Grundverb mit be-, ver-, er-, ent-, zer-, bekommt es kein ge (<i>vorbereitet, verstanden, erklärt</i>).</p>
+</section>
+
+<!-- PRÄTERITUM / PRÄSENS -->
+<section id="praeteritum">
+<h2>Präteritum &amp; Präsens</h2>
+<p class="lead">Im Gespräch sagt man bei <b>sein, haben</b> und den <b>Modalverben</b> fast immer das Präteritum statt des Perfekts. Bei ich und er/sie/es ist die Form gleich.</p>
+
+<h3>Präteritum</h3>
+<div class="tw"><table>
+<tr><th></th><th>sein</th><th>haben</th><th>können</th><th>müssen</th><th>wollen</th></tr>
+<tr><td class="k">ich</td><td>war</td><td>hatte</td><td>konnte</td><td>musste</td><td>wollte</td></tr>
+<tr><td class="k">du</td><td>warst</td><td>hattest</td><td>konntest</td><td>musstest</td><td>wolltest</td></tr>
+<tr><td class="k">er / sie / es</td><td>war</td><td>hatte</td><td>konnte</td><td>musste</td><td>wollte</td></tr>
+<tr><td class="k">wir</td><td>waren</td><td>hatten</td><td>konnten</td><td>mussten</td><td>wollten</td></tr>
+<tr><td class="k">ihr</td><td>wart</td><td>hattet</td><td>konntet</td><td>musstet</td><td>wolltet</td></tr>
+<tr><td class="k">sie / Sie</td><td>waren</td><td>hatten</td><td>konnten</td><td>mussten</td><td>wollten</td></tr>
+</table></div>
+<div class="note"><b>Umlaut = Konjunktiv II</b> (höflich, hypothetisch), <b>kein Umlaut = Präteritum</b>: konnte (could, past) · könnte (could, possible) · hatte / hätte · war / wäre · musste / müsste. Mit <i>würde + Infinitiv</i>: Ich würde ausschlafen. · Könntest du mir helfen?</div>
+
+<h3>Präsens</h3>
+<div class="tw"><table>
+<tr><th></th><th>ich</th><th>du</th><th>er / sie / es</th><th>wir</th><th>ihr</th><th>sie / Sie</th></tr>
+<tr><td class="k">machen (regelmäßig)</td><td>mache</td><td>machst</td><td>macht</td><td>machen</td><td>macht</td><td>machen</td></tr>
+<tr><td class="k">arbeiten (Stamm auf -t / -d)</td><td>arbeite</td><td>arbeit<b>e</b>st</td><td>arbeit<b>e</b>t</td><td>arbeiten</td><td>arbeit<b>e</b>t</td><td>arbeiten</td></tr>
+<tr><td class="k">sprechen</td><td>spreche</td><td>spr<b>i</b>chst</td><td>spr<b>i</b>cht</td><td>sprechen</td><td>sprecht</td><td>sprechen</td></tr>
+<tr><td class="k">essen</td><td>esse</td><td>isst</td><td>isst</td><td>essen</td><td>esst</td><td>essen</td></tr>
+<tr><td class="k">lesen</td><td>lese</td><td>l<b>ie</b>st</td><td>l<b>ie</b>st</td><td>lesen</td><td>lest</td><td>lesen</td></tr>
+<tr><td class="k">fahren</td><td>fahre</td><td>f<b>ä</b>hrst</td><td>f<b>ä</b>hrt</td><td>fahren</td><td>fahrt</td><td>fahren</td></tr>
+<tr><td class="k">laufen</td><td>laufe</td><td>l<b>äu</b>fst</td><td>l<b>äu</b>ft</td><td>laufen</td><td>lauft</td><td>laufen</td></tr>
+<tr><td class="k">können / müssen / wollen</td><td>kann / muss / will</td><td>kannst / musst / willst</td><td>kann / muss / will</td><td>können / müssen / wollen</td><td>könnt / müsst / wollt</td><td>können / müssen / wollen</td></tr>
+</table></div>
+<p>Der Vokalwechsel gibt es nur bei <b>du</b> und <b>er/sie/es</b>, nie bei ihr. Ihr = Stamm + <b>-t</b> (ihr schreibt, ihr sprecht). Perfekt-Partizip hat den Umlaut nicht: gelaufen, gefahren.</p>
+</section>
+
+<!-- PRONOMEN -->
+<section id="pronomen">
+<h2>Personalpronomen</h2>
+<div class="tw"><table>
+<tr><th></th><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr>
+<tr><td class="k">ich</td><td>ich</td><td><b>mich</b></td><td><b>mir</b></td></tr>
+<tr><td class="k">du</td><td>du</td><td><b>dich</b></td><td><b>dir</b></td></tr>
+<tr><td class="k">er</td><td>er</td><td><b>ihn</b></td><td><b>ihm</b></td></tr>
+<tr><td class="k">sie (she)</td><td>sie</td><td>sie</td><td><b>ihr</b></td></tr>
+<tr><td class="k">es</td><td>es</td><td>es</td><td><b>ihm</b></td></tr>
+<tr><td class="k">wir</td><td>wir</td><td><b>uns</b></td><td><b>uns</b></td></tr>
+<tr><td class="k">ihr</td><td>ihr</td><td><b>euch</b></td><td><b>euch</b></td></tr>
+<tr><td class="k">sie (they)</td><td>sie</td><td>sie</td><td><b>ihnen</b></td></tr>
+<tr><td class="k">Sie (formal)</td><td>Sie</td><td>Sie</td><td><b>Ihnen</b></td></tr>
+</table></div>
+<div class="note"><b>Merke:</b> mich / mir, dich / dir, ihn / ihm. Der Fall kommt vom Verb: sehen → <i>ich sehe ihn</i>, helfen → <i>ich helfe ihm</i>. <b>Pronomen vor Nomen</b>, und mit zwei Pronomen steht der <b>Akkusativ zuerst</b>: <i>Ich schenke es ihr.</i> · Ein Pronomen und ein Nomen: Pronomen zuerst (<i>Ich schenke ihr das Buch.</i>).</div>
+</section>
+
+<!-- IMPERATIV -->
+<section id="imperativ">
+<h2>Imperativ &amp; formale E-Mail</h2>
+<div class="tw"><table>
+<tr><th>Form</th><th>Regel</th><th>Beispiel</th></tr>
+<tr><td class="k">du</td><td>Stamm, kein -st</td><td>Komm! Mach! · <b>Lies! Sprich! Nimm!</b> (e → i bleibt) · Fahr! (kein Umlaut)</td></tr>
+<tr><td class="k">ihr</td><td>Stamm + -t</td><td>Kommt! Macht!</td></tr>
+<tr><td class="k">Sie</td><td>Infinitiv + Sie</td><td>Kommen <b>Sie</b>! Rufen <b>Sie</b> mich bitte <b>an</b>!</td></tr>
+<tr><td class="k">wir</td><td>Infinitiv + wir</td><td>Gehen wir!</td></tr>
+<tr><td class="k">sein</td><td>sei / seid / seien Sie</td><td>Seien Sie bitte pünktlich!</td></tr>
+</table></div>
+<p>Trennbare Verben: Vorsilbe ans Ende (Steh <b>auf</b>! Ruf mich <b>an</b>!). Höflicher: <i>Könnten Sie ...?</i></p>
+<div class="tw"><table>
+<tr><th>Teil</th><th>Standardsatz</th></tr>
+<tr><td class="k">Anrede</td><td><b>Sehr geehrte Damen und Herren,</b> · <b>Sehr geehrte Frau Müller,</b> · <b>Sehr geehrter Herr Dr. Schmidt,</b></td></tr>
+<tr><td class="k">Einleitung</td><td>Hiermit bewerbe ich mich auf die Stelle als ... · Mit großem Interesse habe ich Ihre Stellenanzeige gelesen.</td></tr>
+<tr><td class="k">Schluss</td><td>Über eine Einladung zu einem Vorstellungsgespräch freue ich mich sehr. · <b>Mit freundlichen Grüßen</b></td></tr>
+</table></div>
+<p>In formalen Texten werden <b>Sie, Ihr, Ihnen</b> großgeschrieben.</p>
+</section>
+
+<!-- REFLEXIV -->
+<section id="reflexiv">
+<h2>Reflexive Verben</h2>
+<div class="tw"><table>
+<tr><th></th><th>Akkusativ</th><th>Dativ (wenn schon ein Akkusativ da ist)</th></tr>
+<tr><td class="k">ich</td><td><b>mich</b></td><td><b>mir</b></td></tr>
+<tr><td class="k">du</td><td><b>dich</b></td><td><b>dir</b></td></tr>
+<tr><td class="k">er / sie / es</td><td><b>sich</b></td><td><b>sich</b></td></tr>
+<tr><td class="k">wir</td><td><b>uns</b></td><td><b>uns</b></td></tr>
+<tr><td class="k">ihr</td><td><b>euch</b></td><td><b>euch</b></td></tr>
+<tr><td class="k">sie / Sie</td><td><b>sich</b></td><td><b>sich</b></td></tr>
+</table></div>
+<p><b>Häufig:</b> sich bewerben (auf), sich interessieren (für), sich freuen (auf / über), sich erinnern (an), sich vorstellen, sich entscheiden, sich konzentrieren, sich treffen, sich setzen.</p>
+<p class="ex">Ich bewerbe <b>mich</b> auf die Stelle. · Ich interessiere <b>mich</b> für Quantencomputer. · Wir treffen <b>uns</b> morgen. · Ich wasche <b>mir</b> die Hände. · Perfekt immer mit haben: Ich habe <b>mich</b> beworben.</p>
+</section>
+
+<!-- GENITIV -->
+<section id="genitiv">
+<h2>Genitiv</h2>
+<div class="tw"><table>
+<tr><th></th><th class="m">m</th><th class="f">f</th><th class="n">n</th><th class="p">Plural</th></tr>
+<tr><td class="k">Artikel</td><td class="m"><b>des</b></td><td class="f"><b>der</b></td><td class="n"><b>des</b></td><td class="p"><b>der</b></td></tr>
+<tr><td class="k">ein-Wort</td><td class="m">eines</td><td class="f">einer</td><td class="n">eines</td><td class="p">keiner</td></tr>
+<tr><td class="k">Nomen</td><td class="m">+ -(e)s</td><td class="f">–</td><td class="n">+ -(e)s</td><td class="p">–</td></tr>
+</table></div>
+<p class="ex">das Auto <b>des</b> Lehrers · die Tasche <b>der</b> Studentin · die Ergebnisse <b>der</b> Messung · des groß<b>en</b> Hundes (Genitiv → -en) · Annas Buch (ohne Apostroph)</p>
+<div class="tw"><table>
+<tr><th>Präposition + Genitiv</th><th>Beispiel</th></tr>
+<tr><td class="k">wegen</td><td>wegen <b>des</b> Wetters</td></tr>
+<tr><td class="k">trotz</td><td>trotz <b>der</b> Kälte</td></tr>
+<tr><td class="k">während</td><td>während <b>des</b> Studiums</td></tr>
+<tr><td class="k">statt</td><td>statt <b>des</b> Kaffees</td></tr>
+<tr><td class="k">aufgrund</td><td>aufgrund <b>meiner</b> Erfahrung</td></tr>
+<tr><td class="k">im Rahmen</td><td>im Rahmen <b>meines</b> Studiums</td></tr>
+</table></div>
+<p>Umgangssprachlich: <i>von + Dativ</i> (das Auto von meinem Bruder). Für Bewerbungen und formale Texte: Genitiv.</p>
+</section>
+
+<!-- PASSIV -->
+<section id="passiv">
+<h2>Passiv</h2>
+<p class="lead">werden + Partizip II. Das Akkusativobjekt wird zum Subjekt, das alte Subjekt wird zu <b>von + Dativ</b> (oder fällt weg).</p>
+<div class="tw"><table>
+<tr><th>Zeit</th><th>Beispiel</th></tr>
+<tr><td class="k">Präsens</td><td>Die Stelle <b>wird</b> besetzt.</td></tr>
+<tr><td class="k">Präteritum</td><td>Die Stelle <b>wurde</b> besetzt.</td></tr>
+<tr><td class="k">Perfekt</td><td>Die Stelle <b>ist</b> besetzt <b>worden</b>. (nicht geworden)</td></tr>
+<tr><td class="k">mit Modalverb</td><td>Die Bewerbung <b>muss</b> bis Freitag eingereicht <b>werden</b>.</td></tr>
+<tr><td class="k">Zustand (sein)</td><td>Die Stelle <b>ist</b> besetzt. (fertig)</td></tr>
+<tr><td class="k">Aktiv → Passiv</td><td>Der Chef leitet das Team. → Das Team wird <b>vom</b> Chef geleitet.</td></tr>
+</table></div>
+<p class="ex">Stellenanzeige: Sie werden von einem erfahrenen Team betreut. · Bewerbungen werden bis zum 30.11. angenommen. · Alltag: <i>man</i> (Man nimmt Bewerbungen an).</p>
+</section>
+
+<!-- KONNEKTOREN -->
+<section id="konnektoren">
+<h2>wenn / als / ob und weitere Konnektoren</h2>
+<p class="lead">Alle diese Wörter schicken das Verb im Nebensatz <b>ans Ende</b>.</p>
+<div class="tw"><table>
+<tr><th>Wort</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td class="k">wenn</td><td>wenn, immer wenn</td><td><b>Wenn</b> ich Zeit habe, lese ich.</td></tr>
+<tr><td class="k">als</td><td>als (einmalig, Vergangenheit)</td><td><b>Als</b> ich nach Hause kam, war es dunkel.</td></tr>
+<tr><td class="k">ob</td><td>ob (indirekte Frage)</td><td>Ich weiß nicht, <b>ob</b> er kommt.</td></tr>
+<tr><td class="k">falls</td><td>falls</td><td><b>Falls</b> du Zeit hast, ruf an.</td></tr>
+<tr><td class="k">damit</td><td>damit (anderes Subjekt)</td><td>Ich erkläre es, <b>damit</b> du es verstehst.</td></tr>
+<tr><td class="k">um ... zu</td><td>um zu (gleiches Subjekt)</td><td>Ich lerne Deutsch, <b>um</b> in Deutschland <b>zu</b> arbeiten. (oder: weil ich in Deutschland arbeiten will)</td></tr>
+<tr><td class="k">sodass</td><td>sodass (Folge)</td><td>Es war laut, <b>sodass</b> ich nichts hörte.</td></tr>
+<tr><td class="k">während</td><td>während</td><td><b>Während</b> ich lerne, höre ich Musik.</td></tr>
+<tr><td class="k">bevor / nachdem</td><td>bevor / nachdem</td><td><b>Nachdem</b> ich gegessen hatte, ging ich.</td></tr>
+<tr><td class="k">bis</td><td>bis</td><td>Ich warte, <b>bis</b> er kommt.</td></tr>
+<tr><td class="k">deshalb</td><td>deshalb / darum (Grund → Folge)</td><td>Es regnet. <b>Deshalb bleibe</b> ich zu Hause. (Verb direkt danach)</td></tr>
+<tr><td class="k">dafür</td><td>dafür (Zweck) · dafür aber (Ausgleich)</td><td>Ich möchte in München arbeiten. <b>Dafür</b> brauche ich Deutsch. · Das Zimmer ist klein, <b>dafür</b> aber billig.</td></tr>
+<tr><td class="k">trotzdem / obwohl / trotz</td><td>trotzdem (Verb direkt danach) · obwohl (Verb am Ende) · trotz + Genitiv</td><td>Es ist kalt. <b>Trotzdem</b> gehe ich. · <b>Obwohl</b> es kalt ist, ... · <b>Trotz</b> der Kälte ...</td></tr>
+</table></div>
+<p><b>Paare:</b> entweder ... oder · weder ... noch · sowohl ... als auch · nicht nur ... sondern auch · je ... desto. <b>Achtung:</b> <i>Also</i> heißt "so / well", nicht "als".</p>
+</section>
+
+<!-- KONJUNKTIV II -->
+<section id="konjunktiv">
+<h2>Konjunktiv II</h2>
+<p class="lead">Kein Tempus, sondern ein Modus: hypothetisch, höflich, ein Wunsch oder ein Rat. <b>werden → würde</b>, wie will → would.</p>
+<div class="tw"><table>
+<tr><th></th><th>würde + Infinitiv</th><th>sein</th><th>haben</th><th>können</th><th>müssen</th></tr>
+<tr><td class="k">ich</td><td>würde</td><td>wäre</td><td>hätte</td><td>könnte</td><td>müsste</td></tr>
+<tr><td class="k">du</td><td>würdest</td><td>wärst</td><td>hättest</td><td>könntest</td><td>müsstest</td></tr>
+<tr><td class="k">er / sie / es</td><td>würde</td><td>wäre</td><td>hätte</td><td>könnte</td><td>müsste</td></tr>
+<tr><td class="k">wir</td><td>würden</td><td>wären</td><td>hätten</td><td>könnten</td><td>müssten</td></tr>
+<tr><td class="k">ihr</td><td>würdet</td><td>wärt</td><td>hättet</td><td>könntet</td><td>müsstet</td></tr>
+<tr><td class="k">sie / Sie</td><td>würden</td><td>wären</td><td>hätten</td><td>könnten</td><td>müssten</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Funktion</th><th>Beispiel</th></tr>
+<tr><td class="k">Wunsch, unwirklich</td><td>Wenn ich mehr Zeit <b>hätte</b>, <b>würde</b> ich mehr reisen. (Nebensatz: Verb ans Ende; der Hauptsatz beginnt mit würde)</td></tr>
+<tr><td class="k">höfliche Bitte</td><td><b>Könntest</b> du mir bitte helfen? · Ich <b>hätte</b> gern einen Kaffee.</td></tr>
+<tr><td class="k">Ratschlag</td><td>Du <b>solltest</b> mehr schlafen. · An deiner Stelle <b>würde</b> ich mehr schlafen. · Wenn ich du <b>wäre</b>, ...</td></tr>
+</table></div>
+<div class="note"><b>Umlaut = Konjunktiv II</b> (könnte, hätte, wäre, müsste), <b>kein Umlaut = Präteritum</b> (konnte, hatte, war, musste). Bei sollen und wollen sehen beide Formen gleich aus, der Sinn entscheidet.</div>
+</section>
+
+<!-- PRÄTERITUM ALLE -->
+<section id="vergangenheit">
+<h2>Präteritum aller Verben</h2>
+<p class="lead">Wichtig zum Lesen und in geschriebenen Texten. Gesprochen nimmst du das Perfekt, außer bei sein, haben und Modalverben.</p>
+<div class="tw"><table>
+<tr><th></th><th>regelmäßig (machen)</th><th>unregelmäßig (gehen)</th></tr>
+<tr><td class="k">ich</td><td>machte</td><td>ging</td></tr>
+<tr><td class="k">du</td><td>machtest</td><td>gingst</td></tr>
+<tr><td class="k">er / sie / es</td><td>machte</td><td>ging</td></tr>
+<tr><td class="k">wir</td><td>machten</td><td>gingen</td></tr>
+<tr><td class="k">ihr</td><td>machtet</td><td>gingt</td></tr>
+<tr><td class="k">sie / Sie</td><td>machten</td><td>gingen</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Infinitiv</th><th>Präteritum</th><th>Partizip II</th></tr>
+<tr><td>gehen</td><td>ging</td><td>gegangen</td></tr>
+<tr><td>kommen</td><td>kam</td><td>gekommen</td></tr>
+<tr><td>sehen</td><td>sah</td><td>gesehen</td></tr>
+<tr><td>geben</td><td>gab</td><td>gegeben</td></tr>
+<tr><td>nehmen</td><td>nahm</td><td>genommen</td></tr>
+<tr><td>finden</td><td>fand</td><td>gefunden</td></tr>
+<tr><td>schreiben</td><td>schrieb</td><td>geschrieben</td></tr>
+<tr><td>lesen</td><td>las</td><td>gelesen</td></tr>
+<tr><td>sprechen</td><td>sprach</td><td>gesprochen</td></tr>
+<tr><td>essen</td><td>aß</td><td>gegessen</td></tr>
+<tr><td>trinken</td><td>trank</td><td>getrunken</td></tr>
+<tr><td>fahren</td><td>fuhr</td><td>gefahren</td></tr>
+<tr><td>bleiben</td><td>blieb</td><td>geblieben</td></tr>
+<tr><td>schlafen</td><td>schlief</td><td>geschlafen</td></tr>
+<tr><td>helfen</td><td>half</td><td>geholfen</td></tr>
+<tr><td>stehen</td><td>stand</td><td>gestanden</td></tr>
+<tr><td>treffen</td><td>traf</td><td>getroffen</td></tr>
+<tr><td>bringen</td><td>brachte</td><td>gebracht</td></tr>
+<tr><td>denken</td><td>dachte</td><td>gedacht</td></tr>
+<tr><td>wissen</td><td>wusste</td><td>gewusst</td></tr>
+</table></div>
+<h3>Ablaut-Muster (Merkhilfe)</h3>
+<div class="tw"><table>
+<tr><th>Muster</th><th>Verben (Infinitiv – Präteritum – Partizip II)</th></tr>
+<tr><td class="k">e – a – o</td><td>helfen – half – <b>geholfen</b> · sprechen – sprach – gesprochen · treffen – traf – getroffen · nehmen – nahm – genommen</td></tr>
+<tr><td class="k">i – a – u</td><td>trinken – trank – getrunken · finden – fand – gefunden · singen – sang – gesungen</td></tr>
+<tr><td class="k">ei – ie – ie</td><td>bleiben – blieb – geblieben · schreiben – schrieb – geschrieben</td></tr>
+<tr><td class="k">a – u – a</td><td>fahren – fuhr – gefahren · tragen – trug – getragen</td></tr>
+<tr><td class="k">ie – o – o</td><td>ziehen – zog – gezogen (umziehen: ist umgezogen) · fliegen – flog – geflogen · schieben – schob – geschoben</td></tr>
+</table></div>
+<p class="ex">stehen: Standard <b>hat gestanden</b>; im Süden (Bayern, Österreich, Schweiz) auch <i>ist gestanden</i>, ebenso <i>ist gesessen, ist gelegen</i>. In Prüfungen und Anschreiben: <b>hat</b>.</p>
+<h3>Gemischte Verben (Vokalwechsel + -te)</h3>
+<div class="tw"><table>
+<tr><th>Infinitiv</th><th>Präteritum</th><th>Partizip II</th></tr>
+<tr><td>denken</td><td>dachte</td><td>gedacht</td></tr>
+<tr><td>bringen</td><td>brachte</td><td>gebracht</td></tr>
+<tr><td>wissen</td><td>wusste</td><td>gewusst</td></tr>
+<tr><td>kennen</td><td>kannte</td><td>gekannt</td></tr>
+<tr><td>nennen</td><td>nannte</td><td>genannt</td></tr>
+<tr><td>rennen</td><td>rannte</td><td>gerannt (mit sein)</td></tr>
+<tr><td>brennen</td><td>brannte</td><td>gebrannt</td></tr>
+</table></div>
+<p class="ex">Endungen wie bei regelmäßigen Verben (ich dachte, du dachtest, wir dachten). Nicht verwechseln: <b>bringen</b> (brachte) und <b>brauchen</b> (regelmäßig: brauchte, gebraucht).</p>
+<p>Trennbare Verben trennen sich auch im Präteritum: Er <b>stand</b> früh <b>auf</b>. Im Nebensatz zusammen: ..., als er <b>ankam</b>. Wir / sie bekommen immer -en: wir <b>sahen</b>.</p>
+</section>
+
+<!-- KONJUNKTIV II VERGANGENHEIT -->
+<section id="konjpast">
+<h2>Konjunktiv II der Vergangenheit</h2>
+<p class="lead">Für etwas, das nicht passiert ist: <b>hätte / wäre + Partizip II</b>. Das Hilfsverb ist dasselbe wie im Perfekt (haben oder sein).</p>
+<div class="tw"><table>
+<tr><th>Fall</th><th>Beispiel</th></tr>
+<tr><td class="k">haben-Verben</td><td>Wenn ich mehr gelernt <b>hätte</b>, <b>hätte</b> ich den Test bestanden.</td></tr>
+<tr><td class="k">sein-Verben</td><td>Wenn er früher aufgestanden <b>wäre</b>, <b>wäre</b> er nicht zu spät gekommen.</td></tr>
+<tr><td class="k">mit Modalverb</td><td>Ich <b>hätte</b> früher anfangen <b>sollen</b>. · Du <b>hättest</b> mich anrufen <b>können</b>. (zwei Infinitive am Ende)</td></tr>
+<tr><td class="k">Achtung</td><td>Wenn wir den Bus nicht verpasst <b>hätten</b>, <b>wären</b> wir pünktlich gewesen. (verpassen = haben, gewesen = sein)</td></tr>
+</table></div>
+</section>
+
+<!-- MODALPARTIKELN -->
+<section id="partikeln">
+<h2>Modalpartikeln</h2>
+<p class="lead">Kleine Wörter für den Ton, fast nur gesprochen, nicht in Bewerbungen.</p>
+<div class="tw"><table>
+<tr><th>Partikel</th><th>Wirkung</th><th>Beispiel</th><th>Hindi-Gefühl</th></tr>
+<tr><td class="k">doch</td><td>freundliche Aufforderung / Erinnerung</td><td>Komm <b>doch</b> mal vorbei!</td><td>aao <i>na</i></td></tr>
+<tr><td class="k">mal</td><td>macht Bitten weicher</td><td>Kannst du mir <b>mal</b> helfen?</td><td><i>zara</i> dekho</td></tr>
+<tr><td class="k">ja</td><td>wie du weißt / Überraschung</td><td>Du weißt <b>ja</b>, dass ... · Das ist <b>ja</b> toll!</td><td>tum jaante ho <i>na</i></td></tr>
+<tr><td class="k">denn</td><td>Interesse / Ungeduld in Fragen</td><td>Was ist <b>denn</b> los?</td><td></td></tr>
+<tr><td class="k">eben / halt</td><td>so ist es eben</td><td>Das ist <b>halt</b> so.</td><td></td></tr>
+<tr><td class="k">eigentlich</td><td>übrigens, in Wahrheit</td><td>Was machst du <b>eigentlich</b> beruflich?</td><td></td></tr>
+<tr><td class="k">schon</td><td>Beruhigung</td><td>Das wird <b>schon</b> klappen.</td><td></td></tr>
+<tr><td class="k">aber</td><td>Überraschung</td><td>Das ist <b>aber</b> schön!</td><td></td></tr>
+<tr><td class="k">wohl</td><td>wahrscheinlich</td><td>Er ist <b>wohl</b> krank.</td><td></td></tr>
+</table></div>
+</section>
+
+<!-- B2 -->
+<section id="b2">
+<h2>B2-Bausteine</h2>
+<h3>n-Deklination</h3>
+<div class="tw"><table>
+<tr><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th><th>Genitiv</th></tr>
+<tr><td>der Student</td><td>den Student<b>en</b></td><td>dem Student<b>en</b></td><td>des Student<b>en</b></td></tr>
+<tr><td>der Kollege</td><td>den Kollege<b>n</b></td><td>dem Kollege<b>n</b></td><td>des Kollege<b>n</b></td></tr>
+</table></div>
+<p>Männliche Personen und Tiere auf -e (Junge, Kollege), auf -ent / -ant / -ist (Student, Polizist), außerdem der Mensch, der Herr.</p>
+<h3>Partizipien als Adjektive</h3>
+<p><b>Partizip II:</b> die <b>eingereichte</b> Bewerbung (die eingereicht wurde) · das <b>gelöste</b> Problem. <b>Partizip I</b> (Infinitiv + d): das <b>lachende</b> Kind · die <b>steigenden</b> Preise. Normale Adjektivendungen.</p>
+<h3>Konjunktiv I (indirekte Rede)</h3>
+<p>Er sagt, er <b>sei</b> müde. · Er sagt, er <b>habe</b> keine Zeit. In Nachrichten und formalen Texten, erst nur lesen können.</p>
+</section>
+
+<!-- SATZBAU -->
+<section id="satzbau">
+<h2>Satzbau: Wo steht was?</h2>
+
+<div class="tw"><table>
+<tr><th>Position 1</th><th>Position 2</th><th>Mittelfeld</th><th>Satzende</th></tr>
+<tr><td>Gestern</td><td><b>habe</b></td><td>ich meiner Freundin ein Buch</td><td><b>geschenkt</b>.</td></tr>
+<tr><td>Ich</td><td><b>muss</b></td><td>heute früh</td><td><b>aufstehen</b>.</td></tr>
+<tr><td>Ich</td><td><b>stehe</b></td><td>um 6 Uhr</td><td><b>auf</b>.</td></tr>
+<tr><td>Deshalb</td><td><b>lege</b></td><td>ich das Handy in die Schublade</td><td></td></tr>
+</table></div>
+
+<ul>
+<li><b>Position 2</b> ist immer das konjugierte Verb. Beginnst du mit Zeit oder Ort (Gestern, Im Park), steht das Verb danach und das Subjekt folgt.</li>
+<li><b>Satzende</b>: alle anderen Verbteile (Partizip, Infinitiv, Vorsilbe).</li>
+<li><b>Mittelfeld</b>: Subjekt → Pronomen vor Nomen → Dativ vor Akkusativ (<i>meiner Freundin ein Buch</i>; mit Pronomen: <i>es ihr</i>) → <b>Zeit, Grund, Art, Ort</b> (<i>morgen wegen des Termins mit dem Bus nach München</i>).</li>
+<li><b>nicht</b> steht meist vor dem Satzende-Teil oder vor einer Präpositionalgruppe: <i>Du hast nicht mit mir gesprochen.</i></li>
+</ul>
+
+<h3>Wenn „sein" am Satzende steht</h3>
+<div class="tw"><table>
+<tr><th>Warum</th><th>Beispiel</th></tr>
+<tr><td class="k">Modalverb + sein</td><td>Das <b>kann</b> nicht wahr <b>sein</b>.</td></tr>
+<tr><td class="k">werden + sein</td><td>Ich <b>werde</b> pünktlich da <b>sein</b>.</td></tr>
+<tr><td class="k">zu + sein</td><td>Es ist schön, hier <b>zu sein</b>.</td></tr>
+<tr><td class="k">Vermutung (Perfekt)</td><td>Er <b>muss</b> müde <b>gewesen sein</b>.</td></tr>
+<tr><td class="k">Nebensatz</td><td>..., weil er müde <b>ist</b>.</td></tr>
+</table></div>
+<p>Finde zuerst das konjugierte Verb (Position 2, im Nebensatz ganz am Ende). Alles andere ist der Stapel am Satzende.</p>
+
+<h3>Konjunktionen</h3>
+<div class="tw"><table>
+<tr><th>Typ</th><th>Wörter</th><th>Verb</th></tr>
+<tr><td class="k">Haupt-/Hauptsatz-Verbinder</td><td>und, aber, oder, denn</td><td>bleibt an Position 2 (keine Änderung)</td></tr>
+<tr><td class="k">Nebensatz</td><td>weil, dass, obwohl, wenn, nachdem, bevor, damit, während, ohne dass</td><td><b>ganz ans Ende</b></td></tr>
+<tr><td class="k">Adverb-Verbinder</td><td>deshalb, trotzdem, außerdem, zudem, allerdings, jedoch</td><td>direkt nach dem Wort (Position 2)</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Fall im Nebensatz</th><th>Beispiel</th></tr>
+<tr><td class="k">Modalverb</td><td>..., weil ich das nicht verstehen <b>kann</b>. (Infinitiv vor dem Modalverb)</td></tr>
+<tr><td class="k">Perfekt</td><td>..., weil ich heute früh aufgestanden <b>bin</b>. (Partizip vor dem Hilfsverb)</td></tr>
+<tr><td class="k">trennbar</td><td>..., weil ich jeden Tag um 5 Uhr <b>aufstehe</b>. (zusammen)</td></tr>
+<tr><td class="k">indirekte Frage</td><td>Ich weiß nicht, wie man Tamil auf Deutsch <b>sagt</b>.</td></tr>
+<tr><td class="k">zu-Infinitiv</td><td>Ein Spiel hilft den Kindern, die Quantenphysik einfacher <b>zu verstehen</b>.</td></tr>
+</table></div>
+</section>
+
+<!-- RELATIVSÄTZE -->
+<section id="relativ">
+<h2>Relativsätze</h2>
+<p class="lead">Ein Nebensatz, der ein Nomen beschreibt. Komma davor, Verb am Ende, und das Pronomen wird <b>nie weggelassen</b> (anders als im Englischen: <i>die Stelle, die ich suche</i>).</p>
+<div class="tw"><table>
+<tr><th></th><th class="m">m</th><th class="f">f</th><th class="n">n</th><th class="p">Plural</th></tr>
+<tr><td class="k">Nominativ</td><td class="m">der</td><td class="f">die</td><td class="n">das</td><td class="p">die</td></tr>
+<tr><td class="k">Akkusativ</td><td class="m">den</td><td class="f">die</td><td class="n">das</td><td class="p">die</td></tr>
+<tr><td class="k">Dativ</td><td class="m">dem</td><td class="f">der</td><td class="n">dem</td><td class="p"><b>denen</b></td></tr>
+</table></div>
+<div class="note"><b>Drei Schritte:</b> 1) Genus und Zahl kommen vom Nomen davor. 2) Der Fall kommt von der Rolle im Relativsatz (Wer/Was? · Wen/Was? · Wem?). 3) Das Verb steht am Ende. Eine Präposition im Relativsatz entscheidet ihren Fall selbst (Wo? → Dativ).</div>
+<div class="tw"><table>
+<tr><th>Rolle</th><th>Beispiel</th></tr>
+<tr><td class="k">Nominativ</td><td>Das ist der Forscher, <b>der</b> im Labor arbeitet.</td></tr>
+<tr><td class="k">Akkusativ</td><td>Das ist die Stelle, <b>die</b> ich suche.</td></tr>
+<tr><td class="k">Dativ</td><td>Das ist die Kollegin, <b>der</b> ich helfe. · Das sind die Studenten, <b>denen</b> ich helfe.</td></tr>
+<tr><td class="k">mit Präposition</td><td>Das ist die Firma, <b>in der</b> ich arbeite. · ..., <b>für die</b> ich arbeite. · Das ist der Chef, für <b>den</b> ich arbeite.</td></tr>
+<tr><td class="k">Bewerbung</td><td>Ich suche eine Stelle, <b>die</b> mit Quantencomputern zu tun hat. · Ich möchte in einem Team arbeiten, <b>in dem</b> ich viel lernen kann.</td></tr>
+</table></div>
+</section>
+
+<!-- TRENNBAR -->
+<section id="trennbar">
+<h2>Trennbare Verben</h2>
+<div class="cols">
+<div class="tw"><table>
+<tr><th>Trennbar</th><th>Beispiel</th></tr>
+<tr><td class="k">ab-</td><td>abholen, abfahren</td></tr>
+<tr><td class="k">an-</td><td>anrufen, ankommen, anfangen</td></tr>
+<tr><td class="k">auf-</td><td>aufstehen, aufmachen</td></tr>
+<tr><td class="k">aus-</td><td>ausgehen, aussehen</td></tr>
+<tr><td class="k">ein-</td><td>einkaufen, einladen</td></tr>
+<tr><td class="k">mit-</td><td>mitkommen, mitbringen</td></tr>
+<tr><td class="k">vor-</td><td>vorstellen, vorlesen</td></tr>
+<tr><td class="k">zu-</td><td>zuhören, zumachen</td></tr>
+<tr><td class="k">zurück- / fern- / weg-</td><td>zurückkommen, fernsehen, weggehen</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Nicht trennbar</th><th>Beispiel</th></tr>
+<tr><td class="k">be-</td><td>besuchen, bekommen</td></tr>
+<tr><td class="k">ge-</td><td>gehören, gefallen</td></tr>
+<tr><td class="k">er-</td><td>erklären, erzählen</td></tr>
+<tr><td class="k">ver-</td><td>verstehen, vergessen</td></tr>
+<tr><td class="k">zer-</td><td>zerstören</td></tr>
+<tr><td class="k">ent-</td><td>entdecken, entscheiden</td></tr>
+</table></div>
+</div>
+<div class="tw"><table>
+<tr><th>Form</th><th>aufstehen</th><th>anrufen</th></tr>
+<tr><td class="k">Hauptsatz</td><td>Ich stehe um 6 Uhr <b>auf</b>.</td><td>Ich rufe dich später <b>an</b>.</td></tr>
+<tr><td class="k">mit Modalverb</td><td>Ich muss früh <b>aufstehen</b>.</td><td>Ich will dich <b>anrufen</b>.</td></tr>
+<tr><td class="k">Nebensatz</td><td>..., weil ich früh <b>aufstehe</b>.</td><td>..., weil ich dich <b>anrufe</b>.</td></tr>
+<tr><td class="k">Perfekt</td><td>Ich bin <b>aufgestanden</b>.</td><td>Ich habe dich <b>angerufen</b>.</td></tr>
+</table></div>
+<p class="ex">durch-, über-, um-, unter-, wieder-, hinter- können beides sein (kommt später).</p>
+</section>
+
+<!-- GENUS / PLURAL -->
+<section id="genus">
+<h2>Genus &amp; Plural</h2>
+<p class="lead">Lerne jedes Nomen <b>mit Artikel</b> und sag es in drei Phrasen: <i>der Laptop, ein neuer Laptop, mit dem Laptop</i>.</p>
+
+<div class="tw"><table>
+<tr><th class="f">die</th><th class="n">das</th><th class="m">der</th></tr>
+<tr>
+<td class="f">-ung (die Wohnung)<br>-heit, -keit (die Freiheit)<br>-schaft, -tion, -ik, -ur, -ie, -ität<br>-ft (die Zukunft, die Kraft)<br>-thek (die Bibliothek)<br>-in (die Lehrerin)<br>meist -e (die Tasche)<br>Bäume/Blumen (die Rose)</td>
+<td class="n">-chen, -lein (das Mädchen)<br>-ment (das Experiment)<br>-um (das Studium)<br>-nis (das Ergebnis)<br>Ge- (das Gebäude, das Gespräch)<br>Junge Wesen (das Kind)<br>Infinitiv als Nomen (das Essen)<br>Metalle, Sprachen, Farben<br>-om / -on in der Wissenschaft (das Atom, das Elektron)</td>
+<td class="m">-er (der Lehrer)<br>-ling, -ismus<br>Wochentage, Monate, Jahreszeiten (der Montag, der Herbst)<br>Wetter (der Regen)<br>Himmelsrichtungen<br>meist Wein/Alkohol (der Wein)<br>einsilbig auf Konsonant (der Tisch, der Raum, der Fluss)<br>-en, kein Verb (der Kuchen, der Garten)</td>
+</tr>
+</table></div>
+<div class="warn"><b>Ausnahmen:</b> -er ist meist der, aber <b>das</b> Fenster, das Zimmer, das Wasser, das Wetter, das Messer. Verwandte Frauen mit -er sind <b>die</b>: die Mutter, die Schwester, die Tochter. Außerdem: das Bier, das Handy, der Laptop, das Mädchen (weiblich, aber das). Männliches -e: der Käse, der Gedanke, der Name, der Junge, der Kollege. Feminin trotz -nis: die Kenntnis, die Erkenntnis. Feminin und einsilbig: die Zahl, die Stadt, die Hand. Im Zweifel nachschlagen und mit Artikel merken.</div>
+<div class="note"><b>Zusammengesetzte Nomen:</b> das <b>letzte Wort</b> entscheidet. Mittag + essen → <b>das</b> Mittagessen · Haus + Aufgabe → <b>die</b> Hausaufgabe · Hand + Schuh → <b>der</b> Handschuh.</div>
+
+<h3>Wörter zum Wiederholen (Quiz-Fehler)</h3>
+<div class="tw"><table>
+<tr><th>Nomen</th><th>Warum</th></tr>
+<tr><td class="n">das Fenster</td><td>-er, aber Ausnahme</td></tr>
+<tr><td class="n">das Museum</td><td>-um → das</td></tr>
+<tr><td class="m">der Kuchen</td><td>-en, kein Verb → meist der</td></tr>
+<tr><td class="f">die Zukunft</td><td>-ft → die</td></tr>
+<tr><td class="f">die Kraft</td><td>-ft → die</td></tr>
+<tr><td class="m">der Garten</td><td>-en, kein Verb → meist der</td></tr>
+<tr><td class="m">der Raum</td><td>einsilbig auf Konsonant → meist der</td></tr>
+<tr><td class="f">die Bibliothek</td><td>-thek → die</td></tr>
+<tr><td class="m">der Käse</td><td>männliches -e, Ausnahme</td></tr>
+<tr><td class="m">der Gedanke</td><td>männliches -e (wie der Name, der Junge)</td></tr>
+<tr><td class="m">der Kollege</td><td>männliche Person, -e</td></tr>
+<tr><td class="f">die Zahl</td><td>einsilbig, aber feminin</td></tr>
+<tr><td class="n">das Atom</td><td>-om / -on in der Wissenschaft → das (das Elektron)</td></tr>
+<tr><td class="n">das Kapitel</td><td>keine Regel, merken</td></tr>
+<tr><td class="m">der Unterschied</td><td>keine Regel, merken</td></tr>
+<tr><td class="f">die Lösung</td><td>-ung → die</td></tr>
+<tr><td class="n">das Telefon</td><td>-on → das</td></tr>
+</table></div>
+
+<h3>Plural</h3>
+<div class="tw"><table>
+<tr><th>Muster</th><th>Beispiele</th><th>Meist bei</th></tr>
+<tr><td class="k">-e (± Umlaut)</td><td>der Tisch → die Tisch<b>e</b> · die Stadt → die St<b>ä</b>dt<b>e</b> · der Hund → die Hund<b>e</b></td><td>vielen maskulinen</td></tr>
+<tr><td class="k">-er (+ Umlaut)</td><td>das Buch → die B<b>ü</b>ch<b>er</b> · das Kind → die Kind<b>er</b></td><td>vielen neutralen</td></tr>
+<tr><td class="k">-(e)n</td><td>die Frau → die Frau<b>en</b> · die Tasche → die Tasche<b>n</b> · die Wohnung → die Wohnung<b>en</b></td><td>fast allen femininen</td></tr>
+<tr><td class="k">keine Endung</td><td>das Fenster · das Teilchen · der Apfel → die <b>Ä</b>pfel</td><td>-er, -en, -chen, -el</td></tr>
+<tr><td class="k">-se / -nisse</td><td>das Ergebnis → die Ergebnis<b>se</b></td><td>-nis</td></tr>
+</table></div>
+<p><b>Dativ Plural:</b> den + Nomen mit <b>-n</b> (den Kindern, den Männern, den Bäumen).</p>
+
+<h3>Nomen aus unserem Unterricht</h3>
+<div class="tw"><table>
+<tr><th>Nomen</th><th>Plural</th><th>Englisch</th></tr>
+<tr><td class="f">die Vorlesung</td><td>-en</td><td>lecture</td></tr>
+<tr><td class="n">das Seminar</td><td>-e</td><td>seminar</td></tr>
+<tr><td class="f">die Prüfung</td><td>-en</td><td>exam</td></tr>
+<tr><td class="m">der Termin</td><td>-e</td><td>appointment</td></tr>
+<tr><td class="n">das Experiment</td><td>-e</td><td>experiment</td></tr>
+<tr><td class="m">der Versuch</td><td>-e</td><td>attempt, trial</td></tr>
+<tr><td class="f">die Messung</td><td>-en</td><td>measurement</td></tr>
+<tr><td class="n">das Ergebnis</td><td>-se</td><td>result</td></tr>
+<tr><td class="f">die Gleichung</td><td>-en</td><td>equation</td></tr>
+<tr><td class="m">der Beweis</td><td>-e</td><td>proof</td></tr>
+<tr><td class="f">die Annahme</td><td>-n</td><td>assumption</td></tr>
+<tr><td class="m">der Zufall</td><td>Zufälle</td><td>chance</td></tr>
+<tr><td class="f">die Wahrscheinlichkeit</td><td>-en</td><td>probability</td></tr>
+<tr><td class="n">das Teilchen</td><td>–</td><td>particle</td></tr>
+<tr><td class="f">die Welle</td><td>-n</td><td>wave</td></tr>
+<tr><td class="m">der Forscher</td><td>–</td><td>researcher</td></tr>
+<tr><td class="f">die Forschung</td><td>-en</td><td>research</td></tr>
+<tr><td class="n">das Labor</td><td>-e</td><td>lab</td></tr>
+<tr><td class="f">die Wirklichkeit</td><td>–</td><td>reality</td></tr>
+<tr><td class="n">das Ereignis</td><td>-se</td><td>event</td></tr>
+<tr><td class="m">der Beruf</td><td>-e</td><td>profession</td></tr>
+<tr><td class="f">die Bewerbung</td><td>-en</td><td>application</td></tr>
+<tr><td class="n">das Gehalt</td><td>Gehälter</td><td>salary</td></tr>
+<tr><td class="f">die Erfahrung</td><td>-en</td><td>experience</td></tr>
+<tr><td class="m">der Lebenslauf</td><td>-läufe</td><td>CV</td></tr>
+<tr><td class="n">das Unternehmen</td><td>–</td><td>company</td></tr>
+<tr><td class="f">die Stelle</td><td>-n</td><td>job position</td></tr>
+<tr><td class="f">die Stellenanzeige</td><td>-n</td><td>job ad</td></tr>
+<tr><td class="f">die Qualifikation</td><td>-en</td><td>qualification</td></tr>
+<tr><td class="m">der Abschluss</td><td>Abschlüsse</td><td>degree, completion</td></tr>
+<tr><td class="f">die Kenntnis</td><td>Kenntnisse</td><td>knowledge, skill (Ausnahme: -nis, aber die)</td></tr>
+<tr><td class="n">das Vorstellungsgespräch</td><td>-e</td><td>job interview</td></tr>
+<tr><td class="f">die Berufserfahrung</td><td>-en</td><td>work experience</td></tr>
+<tr><td class="n">das Zeugnis</td><td>-se</td><td>certificate, reference</td></tr>
+<tr><td class="f">die Fähigkeit</td><td>-en</td><td>ability, skill</td></tr>
+</table></div>
+</section>
+
+<!-- UHRZEIT -->
+<section id="uhrzeit">
+<h2>Uhrzeit</h2>
+<div class="note"><b>Falle:</b> <b>halb</b> = halb VOR der nächsten Stunde. <i>halb drei</i> = 2:30.</div>
+<div class="tw"><table>
+<tr><th>Uhr</th><th>Umgangssprache</th><th>Formal (24 h)</th></tr>
+<tr><td>9:00</td><td>neun (Uhr)</td><td>neun Uhr</td></tr>
+<tr><td>9:05</td><td>fünf nach neun</td><td>neun Uhr fünf</td></tr>
+<tr><td>9:10</td><td>zehn nach neun</td><td>neun Uhr zehn</td></tr>
+<tr><td>9:15</td><td><b>Viertel nach</b> neun</td><td>neun Uhr fünfzehn</td></tr>
+<tr><td>9:20</td><td>zwanzig nach neun</td><td>neun Uhr zwanzig</td></tr>
+<tr><td>9:25</td><td>fünf vor <b>halb</b> zehn</td><td>neun Uhr fünfundzwanzig</td></tr>
+<tr><td>9:30</td><td><b>halb zehn</b></td><td>neun Uhr dreißig</td></tr>
+<tr><td>9:35</td><td>fünf nach <b>halb</b> zehn</td><td>neun Uhr fünfunddreißig</td></tr>
+<tr><td>9:40</td><td>zwanzig vor zehn</td><td>neun Uhr vierzig</td></tr>
+<tr><td>9:45</td><td><b>Viertel vor</b> zehn</td><td>neun Uhr fünfundvierzig</td></tr>
+<tr><td>9:50</td><td>zehn vor zehn</td><td>neun Uhr fünfzig</td></tr>
+<tr><td>14:30</td><td>halb drei</td><td>vierzehn Uhr dreißig</td></tr>
+</table></div>
+<p><b>Fragen:</b> Wie spät ist es? · Wie viel Uhr ist es? · Um wie viel Uhr ...? &nbsp;·&nbsp; <b>um</b> 9 Uhr (genau) · <b>gegen</b> 9 Uhr (ungefähr) · <b>Punkt</b> 9 · <b>von</b> ... <b>bis</b> ... · <b>ab</b> 9 Uhr. <b>Tageszeiten:</b> morgens · vormittags · mittags · nachmittags · abends · nachts. <b>die Uhr</b> (Plural die Uhren): <i>an der Uhr die Zeit ablesen</i>.</p>
+<h3>Süddeutsch / bairisch (München, Österreich)</h3>
+<div class="tw"><table>
+<tr><th>Uhr</th><th>Hochdeutsch (Norden, Westen)</th><th>Süden und Osten</th></tr>
+<tr><td>2:15</td><td>Viertel nach zwei</td><td><b>viertel drei</b></td></tr>
+<tr><td>2:30</td><td>halb drei</td><td>halb drei (überall gleich)</td></tr>
+<tr><td>2:45</td><td>Viertel vor drei</td><td><b>dreiviertel drei</b></td></tr>
+</table></div>
+<p><b>Falle:</b> <i>viertel drei</i> = 2:15 (nicht 3:15), <i>dreiviertel drei</i> = 2:45. Die Logik ist wie bei <i>halb</i>: man zählt von der <b>nächsten Stunde</b>. <i>halb sechs</i> = 5:30. Im Zweifel nachfragen: <i>Meinst du zwei Uhr fünfzehn?</i></p>
+<p class="ex">Mehrere Zeitangaben: vom Allgemeinen zum Besonderen. <i>Leider habe ich <b>diese Woche morgens</b> keine Zeit.</i></p>
+</section>
+
+<!-- ADVERBIEN -->
+<section id="adverbien">
+<h2>Adverbien</h2>
+<div class="tw"><table>
+<tr><th>Wortart</th><th>Endungen?</th><th>Beispiel</th></tr>
+<tr><td class="k">Adjektiv vor Nomen</td><td>ja (Fall, Genus, Zahl)</td><td>ein schnell<b>er</b> Läufer</td></tr>
+<tr><td class="k">Adjektiv als Adverb (beim Verb)</td><td><b>nein</b></td><td>Er läuft schnell.</td></tr>
+<tr><td class="k">echtes Adverb</td><td><b>nein</b></td><td>normalerweise, heute, oft, hier</td></tr>
+</table></div>
+<p><b>-weise-Adverbien:</b> normalerweise · glücklicherweise · möglicherweise · teilweise · beispielsweise. Position: <i>Normalerweise trinke ich Kaffee.</i> (Position 1, dann das Verb) · <i>Ich trinke normalerweise Kaffee.</i> (Mittelfeld)</p>
+</section>
+
+<!-- TEXTFRAGEN -->
+<section id="textfragen">
+<h2>Fragen zu Texten beantworten</h2>
+<p class="lead">Vier Schritte: 1) Fragewort markieren. 2) Stelle im Text suchen. 3) Mit eigenen Worten in einem vollständigen Satz antworten. 4) Richtiges Tempus.</p>
+<div class="tw"><table>
+<tr><th>Fragetyp</th><th>Was tun?</th><th>Muster</th></tr>
+<tr><td class="k">Detail</td><td>Stelle finden, Satz umformen</td><td>Warum ...? → Weil ...</td></tr>
+<tr><td class="k">Richtig / Falsch</td><td>Antwort + Beleg aus dem Text</td><td>Falsch. Im Text steht: „..."</td></tr>
+<tr><td class="k">Wortschatz im Kontext</td><td>Synonym oder Erklärung</td><td>Hier bedeutet „X" so viel wie ...</td></tr>
+<tr><td class="k">Bezug</td><td>Nomen oder Handlung davor nennen</td><td>„Das" bezieht sich auf ...</td></tr>
+<tr><td class="k">Schlussfolgerung</td><td>aus Hinweisen schließen, mit <i>weil</i></td><td>Der Text zeigt, dass ..., weil ...</td></tr>
+<tr><td class="k">Hauptgedanke</td><td>ein Satz über das Ganze</td><td>Der Text handelt von ...</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Wort</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td class="k">der Grund</td><td>reason (warum?)</td><td>Der Grund ist das Experiment.</td></tr>
+<tr><td class="k">der Beweis</td><td>proof</td><td>Das ist ein Beweis für die Theorie.</td></tr>
+<tr><td class="k">der Beleg</td><td>evidence, Stelle im Text</td><td>Als Beleg zitierst du einen Satz.</td></tr>
+<tr><td class="k">die Bedeutung / der Sinn</td><td>meaning / sense, point</td><td>Was ist die Bedeutung von „zeigt"? · Das macht Sinn.</td></tr>
+</table></div>
+</section>
+
+<!-- ERKLÄR-ATOME -->
+<section id="atome">
+<h2>Erklär-Atome</h2>
+<p class="lead">Wörter umschreiben, ohne das Wort zu nennen (Thinking in German). Muster: <i>Das ist ein Ding, mit dem man ... · Das ist ein Ort, an dem ... · Das ist etwas, das ...</i></p>
+<div class="tw"><table>
+<tr><th>Gruppe</th><th>Wörter</th></tr>
+<tr><td class="k">Dinge</td><td>das Ding, die Sache, der Mensch, der Ort, die Zeit, die Art, der Teil, der Grund</td></tr>
+<tr><td class="k">Eigenschaften</td><td>groß, klein, viel, wenig, gut, schlecht, neu, alt, gleich, anders, ähnlich</td></tr>
+<tr><td class="k">Handlungen</td><td>machen, benutzen, brauchen, haben, geben, nehmen, sagen, wissen, wollen, passieren</td></tr>
+<tr><td class="k">Verbindungen</td><td>mit, ohne, für, weil, wenn, damit, so ... dass</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Beispiel</th><th>Erklärung</th></tr>
+<tr><td class="k">das Labor</td><td>Das Labor ist ein Ort, an dem Forscher arbeiten. (Forscher ohne Artikel = Plural → arbeiten; <i>ein Forscher arbeitet</i>)</td></tr>
+<tr><td class="k">die Uhr</td><td>Die Uhr ist ein Ding, mit dem man die Zeit messen kann.</td></tr>
+<tr><td class="k">der Kaffee</td><td>Ein Kaffee ist etwas, das man trinkt. Man trinkt <b>ihn</b> morgens. <b>Er</b> macht mich wach.</td></tr>
+</table></div>
+<div class="note"><b>Pronomen folgen dem Genus des Nomens:</b> der Kaffee → er / ihn · die Milch → sie · das Wasser → es. <b>es</b> bezieht sich nur auf <i>etwas</i> oder neutrale Nomen. Viele Getränke sind maskulin (der Kaffee, Tee, Wein, Saft), aber <b>das</b> Bier, Wasser, <b>die</b> Milch.</div>
+</section>
+
+<!-- IDIOME -->
+<section id="idiome">
+<h2>Idiome &amp; Kollokationen</h2>
+<p class="lead">Hier gibt es keine Regel, nur Gewöhnung. Die Erklärungen stehen auf Deutsch, damit du direkt in der Sprache denkst. Lerne sie als ganze Stücke.</p>
+
+<h3>Kollokationen (Wörter, die zusammengehören)</h3>
+<div class="tw"><table>
+<tr><th>Wendung</th><th>Erklärung</th><th>Beispiel</th></tr>
+<tr><td class="k">eine Entscheidung treffen</td><td>etwas entscheiden</td><td>Ich muss bald eine Entscheidung treffen.</td></tr>
+<tr><td class="k">eine Frage stellen</td><td>jemanden etwas fragen</td><td>Darf ich Ihnen eine Frage stellen?</td></tr>
+<tr><td class="k">Erfahrung sammeln</td><td>durch Tun Erfahrung bekommen</td><td>Im Praktikum sammle ich Erfahrung.</td></tr>
+<tr><td class="k">einen Termin vereinbaren</td><td>einen Termin ausmachen</td><td>Wir vereinbaren einen Termin.</td></tr>
+<tr><td class="k">eine Bewerbung einreichen</td><td>die Bewerbung abgeben</td><td>Ich reiche die Bewerbung ein.</td></tr>
+<tr><td class="k">Fortschritte machen</td><td>besser werden</td><td>Du machst große Fortschritte.</td></tr>
+<tr><td class="k">eine Rolle spielen</td><td>wichtig sein</td><td>Das spielt keine Rolle.</td></tr>
+<tr><td class="k">mit etwas zu tun haben</td><td>eine Verbindung zu etwas haben</td><td>Die Stelle hat mit Quantencomputern zu tun.</td></tr>
+<tr><td class="k">Sinn machen / keinen Sinn haben</td><td>logisch sein / nicht logisch sein</td><td>Das macht Sinn. · Das hat keinen Sinn.</td></tr>
+<tr><td class="k">es gibt + Akkusativ</td><td>etwas ist vorhanden</td><td>Es gibt wenig Tageslicht.</td></tr>
+<tr><td class="k">es geht um + Akkusativ</td><td>das Thema ist</td><td>Es geht um ein Paar.</td></tr>
+<tr><td class="k">es kommt darauf an, ob ...</td><td>das hängt davon ab</td><td>Es kommt darauf an, ob ich Zeit habe.</td></tr>
+</table></div>
+
+<h3>Redewendungen</h3>
+<div class="tw"><table>
+<tr><th>Redewendung</th><th>Erklärung</th><th>Beispiel</th></tr>
+<tr><td class="k">nicht meine Tasse Tee / nicht mein Fall</td><td>das gefällt mir nicht besonders</td><td>Experimentelle Physik ist nicht mein Fall.</td></tr>
+<tr><td class="k">Keine Sorge! / Mach dir keine Sorgen.</td><td>Du musst dich nicht sorgen.</td><td>Keine Sorge, das klappt schon.</td></tr>
+<tr><td class="k">Kein Problem.</td><td>Das ist in Ordnung.</td><td>Kein Problem, ich helfe dir.</td></tr>
+<tr><td class="k">An deiner Stelle würde ich ...</td><td>Ratschlag</td><td>An deiner Stelle würde ich mehr schlafen.</td></tr>
+<tr><td class="k">Das ist Wahnsinn!</td><td>Das ist unglaublich.</td><td>Hundert Wörter an einem Tag, das ist Wahnsinn!</td></tr>
+<tr><td class="k">Blödsinn / Unsinn</td><td>etwas Falsches oder Dummes</td><td>Das ist doch Blödsinn!</td></tr>
+<tr><td class="k">Ich bin geschafft.</td><td>Ich bin sehr müde.</td><td>Nach dem Forum war ich geschafft.</td></tr>
+<tr><td class="k">Das kann nicht wahr sein!</td><td>Ich glaube es nicht.</td><td>Schon wieder Winterzeit? Das kann nicht wahr sein!</td></tr>
+<tr><td class="k">die Nase voll haben</td><td>genug von etwas haben</td><td>Ich habe die Nase voll vom Regen.</td></tr>
+<tr><td class="k">den Nagel auf den Kopf treffen</td><td>genau das Richtige sagen</td><td>Du hast den Nagel auf den Kopf getroffen.</td></tr>
+<tr><td class="k">ins Wasser fallen</td><td>nicht stattfinden</td><td>Das Picknick fällt ins Wasser.</td></tr>
+<tr><td class="k">Ich drücke dir die Daumen.</td><td>Ich wünsche dir Glück.</td><td>Morgen ist dein Termin, ich drücke dir die Daumen!</td></tr>
+<tr><td class="k">Das ist Jacke wie Hose. / gehupft wie gesprungen</td><td>Es ist egal, es ist dasselbe.</td><td>Ob schaffen oder erreichen, das ist Jacke wie Hose.</td></tr>
+<tr><td class="k">Äpfel mit Birnen vergleichen</td><td>Unvergleichbares vergleichen</td><td>Das ist, als würdest du Äpfel mit Birnen vergleichen.</td></tr>
+<tr><td class="k">jemandem über den Weg laufen</td><td>jemanden zufällig treffen</td><td>Gestern ist mir mein Kollege über den Weg gelaufen.</td></tr>
+<tr><td class="k">Das ist Haarspalterei.</td><td>Das ist zu genau, unwichtig.</td><td>Dieser Unterschied ist Haarspalterei.</td></tr>
+<tr><td class="k">Keine Ahnung. · Ich komm' nicht drauf. · Mir fällt das Wort nicht ein.</td><td>Ich erinnere mich nicht.</td><td>Das Wort fällt mir gerade nicht ein.</td></tr>
+<tr><td class="k">Hab ich fast vergessen!</td><td>(lockerer Satzanfang ohne <i>es</i>)</td><td>Hab ich fast vergessen! (formal: Ich habe es fast vergessen.)</td></tr>
+<tr><td class="k">nach sich ziehen</td><td>zur Folge haben</td><td>Der Fehler zieht Konsequenzen nach sich.</td></tr>
+<tr><td class="k">ziehen / drücken / umziehen / anziehen</td><td>pull / push / move house / put on</td><td>Auf der Tür steht „Ziehen". · Ich bin nach München umgezogen.</td></tr>
+<tr><td class="k">ziehen ↔ drücken · schieben · stoßen · der Druck</td><td>pull ↔ push, press · push along · shove · pressure</td><td>Bitte drücken. · den Einkaufswagen schieben · der Luftdruck. (drücken: drückte, gedrückt)</td></tr>
+<tr><td class="k">Moment, ich überlege kurz.</td><td>Ich brauche Zeit zum Denken.</td><td>Das ist eine gute Frage. Moment, ich überlege kurz.</td></tr>
+</table></div>
+</section>
+
+<!-- MERKREIME -->
+<section id="reim">
+<h2>Merkreime &amp; Eselsbrücken</h2>
+<div class="note">
+<p><b>Aus, bei, mit, nach, seit, von, zu:</b><br>der Dativ lässt dir keine Ruh'.</p>
+<p><b>Durch, für, gegen, ohne, um:</b><br>Akkusativ, nicht dumm!</p>
+<p>Wohin? Da läufst du, das ist klar:<br>Akkusativ, wunderbar.<br>Wo? Da bleibst du, hier und dort:<br>Dativ, das ist das Wort.</p>
+<p>Im Akkusativ ändert sich nur der Mann:<br>aus „der" wird „den", dann ist's getan.</p>
+<p>Dem Mann, der Frau, dem Kind, den Kindern dann:<br>im Plural hängt man noch ein N an.</p>
+<p>Dativ? Dann ist -en dran:<br>häng's einfach an.</p>
+<p>Wechselt der Ort oder der Zustand, dann sein;<br>sonst nimmt man haben, und alles ist fein.</p>
+</div>
+<div class="tw"><table>
+<tr><th>Thema</th><th>Eselsbrücke</th></tr>
+<tr><td class="k">Wechselpräpositionen</td><td><b>A = Action</b> (Wohin? → Akkusativ) · <b>D = Dwell</b> (Wo? → Dativ)</td></tr>
+<tr><td class="k">Nominativ</td><td>N = Name: wer oder was macht es?</td></tr>
+<tr><td class="k">Akkusativ</td><td>A = Aim: wen oder was trifft es? · Nur Männer kriegen ein N (den, einen)</td></tr>
+<tr><td class="k">Dativ</td><td>D = Delivered to: wem? · dem, der, dem, den</td></tr>
+<tr><td class="k">feste Verb + Präposition</td><td>denken an, sprechen über, warten auf, sich erinnern an: immer Akkusativ</td></tr>
+<tr><td class="k">Adjektive</td><td>Dativ = -en · nacktes „ein" = -er / -es</td></tr>
+<tr><td class="k">Perfekt</td><td>Wechsel macht sein</td></tr>
+</table></div>
+</section>
+
+<!-- LIEDER UND SERIEN -->
+<section id="hoeren">
+<h2>Lieder &amp; Serien</h2>
+<p class="lead">Mitsingen ist Shadowing. Schreib eine Zeile, die du magst, und erkläre auf Deutsch, worum es geht.</p>
+<div class="cols">
+<div class="tw"><table>
+<tr><th>Lied</th><th>Künstler</th></tr>
+<tr><td>Leichtes Gepäck</td><td>Silbermond</td></tr>
+<tr><td>Nur noch kurz die Welt retten</td><td>Tim Bendzko</td></tr>
+<tr><td>Au Revoir · Chöre</td><td>Mark Forster</td></tr>
+<tr><td>Easy</td><td>Cro</td></tr>
+<tr><td>Wie soll ein Mensch das ertragen</td><td>Philipp Poisel</td></tr>
+<tr><td>Tage wie diese</td><td>Die Toten Hosen</td></tr>
+<tr><td>Alles neu · Haus am See</td><td>Peter Fox</td></tr>
+<tr><td>99 Luftballons · Irgendwie, irgendwo, irgendwann</td><td>Nena</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Serie / Sendung</th><th>Niveau</th></tr>
+<tr><td>Nicos Weg (DW)</td><td>A1–B1</td></tr>
+<tr><td>Extra auf Deutsch</td><td>A1–B1</td></tr>
+<tr><td>Die Sendung mit der Maus</td><td>A2–B1</td></tr>
+<tr><td>Leschs Kosmos / Terra X</td><td>B1–B2</td></tr>
+<tr><td>How to Sell Drugs Online (Fast)</td><td>B1–B2</td></tr>
+<tr><td>Tatort</td><td>B1–B2</td></tr>
+<tr><td>Dark</td><td>B2+</td></tr>
+</table></div>
+</div>
+</section>
+
+<!-- REDEMITTEL -->
+<section id="phrasen">
+<h2>Redemittel für Gespräche</h2>
+<div class="cols">
+<div>
+<h3>Zeit kaufen (auf Deutsch bleiben)</h3>
+<ul>
+<li>Moment, ich überlege kurz.</li>
+<li>Das ist eine gute Frage.</li>
+<li>Also, ich würde sagen, ...</li>
+<li>Ich glaube, ...</li>
+<li>Wie sagt man ...?</li>
+<li>Ich kenne das Wort nicht. Was heißt das?</li>
+<li>Kannst du das bitte wiederholen?</li>
+<li>Ich bin gerade am Lernen. (umgangssprachlich; standardsprachlich: ich lerne gerade)</li>
+</ul>
+</div>
+<div>
+<h3>Meinung &amp; Begründung</h3>
+<ul>
+<li>Ich finde, dass ... (Verb ans Ende)</li>
+<li>Meiner Meinung nach ...</li>
+<li>..., weil ... / ..., obwohl ... / ..., damit ...</li>
+<li>Einerseits ..., andererseits ...</li>
+<li>Ich würde ... (wenn ich könnte)</li>
+</ul>
+</div>
+</div>
+
+<h3>Fragewörter</h3>
+<div class="tw"><table>
+<tr><td class="k">wer / was</td><td>who / what</td><td class="k">wo / wohin / woher</td><td>where / where to / where from</td></tr>
+<tr><td class="k">wann</td><td>when</td><td class="k">warum / wozu</td><td>why / what for</td></tr>
+<tr><td class="k">wie</td><td>how</td><td class="k">welche(r/s)</td><td>which</td></tr>
+<tr><td class="k">woran / worüber / womit</td><td>about what / with what</td><td class="k">wem / wen</td><td>to whom / whom</td></tr>
+</table></div>
+</section>
+
+<!-- STOLPERSTEINE -->
+<section id="fallen">
+<h2>Typische Stolpersteine</h2>
+<div class="tw"><table>
+<tr><th>Falsch / unsicher</th><th>Richtig</th><th>Grund</th></tr>
+<tr><td>nie (für "no")</td><td><b>nein</b></td><td>nie = never, nein = no</td></tr>
+<tr><td>Ich weiß das Wort</td><td>Ich <b>kenne</b> das Wort</td><td>wissen = Fakt/Nebensatz (ich weiß, dass ...); kennen = Person, Ort, Wort</td></tr>
+<tr><td>zu viele Arbeit</td><td>zu <b>viel</b> Arbeit</td><td>Arbeit, Zeit, Wasser: nicht zählbar → viel</td></tr>
+<tr><td>Subjekt (für "topic")</td><td><b>Thema</b></td><td>Subjekt = Satzglied</td></tr>
+<tr><td>Wörter / Worte</td><td>Wörter = einzelne Wörter · Worte = zusammenhängende Äußerungen</td><td></td></tr>
+<tr><td>Ich liebe wandern</td><td>Ich wandere <b>gern</b></td><td>lieben + Verb nur mit "es ... zu"</td></tr>
+<tr><td>Ich glaube an mir</td><td>Ich glaube an <b>mich</b></td><td>glauben an + Akkusativ</td></tr>
+<tr><td>Ich bin in Köln gegangen</td><td>Ich bin <b>nach</b> Köln <b>gefahren</b></td><td>Städte: nach; Reise: fahren</td></tr>
+<tr><td>Er ist ... <i>war</i> angekommen</td><td>Er <b>ist</b> angekommen</td><td>Perfekt = ist/hat im Präsens</td></tr>
+<tr><td>Ich helfe den Mann</td><td>Ich helfe <b>dem</b> Mann</td><td>helfen = Dativ</td></tr>
+<tr><td>Ich bin im Schublade</td><td>Ich bin in <b>der</b> Schublade</td><td>feminin Dativ = der; im = in dem (m/n)</td></tr>
+<tr><td>Ich habe viel Hunger</td><td>Ich habe <b>großen</b> Hunger</td><td>haben + Akkusativ: großen</td></tr>
+<tr><td>komisch</td><td>komisch = seltsam (strange)</td><td>lustig / witzig = funny</td></tr>
+<tr><td>Ich habe es geschafft</td><td>geschafft = managed, done; auch "ich bin geschafft" = ich bin erschöpft</td><td></td></tr>
+<tr><td>Doch, ich kann mich nicht erinnern</td><td><b>Nein</b>, ich kann mich nicht erinnern.</td><td>doch = ja gegen eine Verneinung, nicht "no"</td></tr>
+<tr><td>Das Text</td><td><b>Der</b> Text</td><td>maskulin</td></tr>
+<tr><td>Die Uhr kann man zahlen</td><td>die Zeit <b>zählen</b> / messen</td><td>zahlen = pay · zählen = count; ohne Umlaut-Taste: zaehlen</td></tr>
+<tr><td>ein Forscher arbeite</td><td>ein Forscher <b>arbeitet</b></td><td>arbeite = ich; er / sie / es + Stamm auf t: -et</td></tr>
+<tr><td>als ein Forscher</td><td>als <b>Forscher</b></td><td>Beruf nach als: ohne Artikel</td></tr>
+<tr><td>Die Bewerbungen wird geprüft</td><td>Die Bewerbungen <b>werden</b> geprüft</td><td>Passiv: werden richtet sich nach dem Subjekt (Plural)</td></tr>
+<tr><td>der Forscher, mit den ich spreche</td><td>mit <b>dem</b></td><td>mit = immer Dativ</td></tr>
+<tr><td>Der Kaffee ... es macht mich wach</td><td>Der Kaffee ... <b>er</b> macht mich wach</td><td>Pronomen folgt dem Genus</td></tr>
+<tr><td>Es geht um ein paar</td><td>Es geht um ein <b>Paar</b></td><td>das Paar = couple · ein paar = a few</td></tr>
+<tr><td>so etwas schön</td><td>so etwas <b>Schönes</b></td><td>etwas + Adjektiv: groß, Endung -es</td></tr>
+<tr><td>Wir sprechen über dem Projekt</td><td>über <b>das</b> Projekt</td><td>sprechen über, denken an, warten auf: Akkusativ</td></tr>
+<tr><td>..., weil heute bin ich früh aufgestanden</td><td>..., weil ich heute früh aufgestanden <b>bin</b></td><td>weil: Verb ans Ende (in der Schrift)</td></tr>
+<tr><td>Das ist ein Gehalt (Akkusativ)</td><td>Nominativ</td><td>nach sein steht immer der Nominativ</td></tr>
+<tr><td>Du darfst so?</td><td>Das <b>darfst</b> du. · Du <b>darfst</b> das machen.</td><td>dürfen = allowed to (ich darf, du darfst); nicht dürfen = must not; nicht müssen = don't have to</td></tr>
+</table></div>
+</section>
+
+<footer>Deutsch-Spickzettel · wächst mit jeder Session mit neuen Regeln und Nomen.</footer>
+</div>
+
+</body></html>

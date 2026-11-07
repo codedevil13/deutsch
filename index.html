@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch</title>
+<link rel="icon" href="deutsch.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1f7a6c">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+:root{
+  --bg:#fff6e5; --surface:#ffffff; --ink:#1d2433; --muted:#5d6577; --line:#e6dcc6;
+  --accent:#ff6b4a; --accent-ink:#1d2433; --teal:#1f7a6c; --teal-soft:#d9efe9; --sun:#ffd45e; --sun-soft:#fff0b8;
+  --good:#1f7a4f; --good-soft:#d8f2e2; --bad:#b4531f; --bad-soft:#ffe3cf; --shadow:#1d2433;
+  --m:#1f5fa8; --f:#c23a24; --n:#2a7d4f;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161f; --surface:#1e2230; --ink:#f4efe6; --muted:#a3a9ba; --line:#33384a;
+    --accent:#ff8a6b; --accent-ink:#14161f; --teal:#5fd0b6; --teal-soft:#193530; --sun:#ffd45e; --sun-soft:#3b3417;
+    --good:#6fd19a; --good-soft:#173a28; --bad:#ffa66e; --bad-soft:#3b2416; --shadow:#000;
+    --m:#7db4ee; --f:#f08f78; --n:#6fcf97;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+h1,h2,h3{font-family:Georgia,"Fraunces",serif;margin:0;line-height:1.15}
+h1{font-size:2.1rem} h2{font-size:1.45rem;margin-bottom:6px} h3{font-size:1.1rem}
+.muted{color:var(--muted)} .small{font-size:.9rem}
+.bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--bg);border-bottom:2px solid var(--ink)}
+.brand{display:flex;align-items:center;gap:8px;font:700 1.25rem Georgia,serif;color:var(--ink);text-decoration:none}
+.brand img{width:34px;height:34px;border-radius:9px}
+nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;padding:7px 13px;border-radius:999px;border:2px solid transparent;color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{border-color:var(--ink)}
+nav a.on{background:var(--ink);color:var(--bg)}
+.wrap{max-width:860px;margin:0 auto;padding:22px 16px 90px}
+.card{background:var(--surface);border:2px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--shadow);padding:20px;margin:18px 0}
+.card.hero{background:var(--sun-soft)}
+.btn{font:inherit;font-weight:700;border:2px solid var(--ink);background:var(--surface);color:var(--ink);padding:10px 18px;border-radius:14px;cursor:pointer;box-shadow:3px 3px 0 var(--shadow);transition:transform .08s,box-shadow .08s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--shadow)}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--shadow)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.big{font-size:1.25rem;padding:14px 26px}
+.btn.ghost{box-shadow:none;border-color:var(--line);background:transparent}
+.btn.ghost:hover{border-color:var(--ink);transform:none;box-shadow:none}
+.btn:disabled{opacity:.5;cursor:default;transform:none}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hello{margin:4px 0 2px}
+.dots{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.day{width:30px;text-align:center;font-size:.7rem;color:var(--muted)}
+.day i{display:block;width:22px;height:22px;margin:0 auto 2px;border-radius:50%;border:2px solid var(--line)}
+.day.on i{background:var(--teal);border-color:var(--teal)}
+.day.today i{border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:12px}
+.st{font:inherit;text-align:left;background:var(--surface);color:var(--ink);border:2px solid var(--ink);border-radius:14px;padding:12px 14px;cursor:pointer}
+.st:hover{background:var(--sun-soft)}
+.st b{display:block}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;padding:1px 9px;border-radius:999px;margin-top:4px}
+.tag.neu{background:var(--line);color:var(--ink)} .tag.ueben{background:var(--sun);color:#1d2433} .tag.sitzt{background:var(--good-soft);color:var(--good)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.92rem;font-weight:600;border:2px solid var(--ink);background:var(--surface);color:var(--ink);padding:5px 13px;border-radius:999px;cursor:pointer}
+.chip:hover{background:var(--sun-soft)}
+.seg{display:flex;gap:6px;margin:0 0 6px}
+.seg i{flex:1;height:10px;border-radius:6px;background:var(--line)}
+.seg i.done{background:var(--teal)} .seg i.cur{background:var(--accent)}
+.segl{display:flex;gap:6px;font-size:.75rem;color:var(--muted);margin-bottom:6px}
+.segl span{flex:1;text-align:center} .segl span.cur{color:var(--ink);font-weight:700}
+.prompt{font:600 1.75rem/1.3 Georgia,serif;margin:10px 0 18px}
+input[type=text],textarea{width:100%;font:inherit;font-size:1.25rem;padding:13px 15px;border-radius:14px;border:2px solid var(--ink);background:var(--surface);color:var(--ink)}
+input[type=text]:focus,textarea:focus{outline:4px solid var(--sun);outline-offset:0}
+textarea{min-height:200px;resize:vertical;font-size:1.1rem}
+.keys{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap}
+.keys button{font:inherit;font-weight:700;width:42px;height:40px;border-radius:10px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.keys button:hover{background:var(--sun)}
+.fb{margin-top:16px;padding:14px 16px;border-radius:14px;border:2px solid;animation:pop .25s ease-out}
+.fb.good{background:var(--good-soft);border-color:var(--good)} .fb.bad{background:var(--bad-soft);border-color:var(--bad)}
+.fb b{display:block;font-size:1.15rem;margin-bottom:2px}
+@keyframes pop{0%{transform:scale(.94);opacity:0}100%{transform:scale(1);opacity:1}}
+.ai{white-space:pre-wrap;background:var(--teal-soft);border:2px solid var(--teal);border-radius:14px;padding:14px 16px;margin-top:14px}
+.der{color:var(--m);font-weight:800}.die{color:var(--f);font-weight:800}.das{color:var(--n);font-weight:800}
+.trow{display:grid;grid-template-columns:1.1fr 1.1fr 1fr;gap:2px 12px;padding:11px 0;border-bottom:2px dotted var(--line);font-size:1.05rem}
+.trow .th{grid-column:1/-1;color:var(--muted);font-size:.88rem} .trow .te{color:var(--muted)}
+@media (max-width:480px){.trow{grid-template-columns:1fr 1fr}.trow .te{grid-column:1/-1}.brand span{display:none}}
+.nrow{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center;padding:8px 0;border-bottom:2px dotted var(--line)}
+.nrow .res{grid-column:1/-1;font-size:.92rem}
+.ok{color:var(--good);font-weight:700} .no{color:var(--bad);font-weight:700}
+.bubble{padding:12px 16px;border-radius:18px;margin:10px 0;max-width:88%;white-space:pre-wrap;border:2px solid var(--ink)}
+.bubble.me{background:var(--accent);color:var(--accent-ink);margin-left:auto}
+.bubble.bot{background:var(--surface)}
+.err{color:var(--bad);margin-top:10px;font-weight:600}
+.sticky{position:sticky;bottom:0;background:var(--bg);border-top:2px solid var(--ink);margin:0 -16px;padding:12px 16px;display:flex;gap:12px;flex-wrap:wrap;z-index:10}
+.spick{width:100%;border:0;display:block;background:transparent}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+.confetti span{position:absolute;top:-30px;font-size:1.6rem;animation:fall 2.4s ease-in forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.9}}
+ul.clean{padding-left:20px;margin:8px 0} ul.clean li{margin:8px 0}
+details>summary{cursor:pointer;font:700 1.3rem Georgia,serif;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"▸ ";color:var(--accent)} details[open]>summary::before{content:"▾ "}
+.text-item{border-bottom:2px dotted var(--line);padding:12px 0}
+.text-item pre{white-space:pre-wrap;font:inherit;margin:6px 0}
+.wortbtn{padding:6px 12px;font-size:.9rem;white-space:nowrap}
+dialog{border:2px solid var(--ink);border-radius:18px;background:var(--surface);color:var(--ink);box-shadow:5px 5px 0 var(--shadow);padding:20px;width:min(440px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:700;opacity:0;transition:all .25s;z-index:50;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.mascot{width:64px;height:64px;flex:0 0 auto}
+.hero-row{display:flex;gap:16px;align-items:center}
+.passage{font:1.2rem/1.95 Georgia,serif;white-space:pre-wrap;max-width:62ch}
+.tabs{display:flex;gap:8px;margin:0 0 12px}
+.gl{display:grid;gap:8px}
+.gl .g{border:2px solid var(--line);border-radius:12px;padding:9px 13px}
+.gl .g b{font-size:1.05rem}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--sun);color:#1d2433;margin-left:6px}
+.timer{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin:6px 0 14px}
+.timer i{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left}
+.timer i.run{animation:drain linear forwards}
+@keyframes drain{to{transform:scaleX(0)}}
+.lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+@media (max-width:640px){.hero-row .mascot{display:none}.bar{gap:8px;padding:8px 10px}.brand span{display:none}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#/"><img src="deutsch.svg" alt=""><span>Deutsch</span></a>
+  <nav id="nav">
+    <a href="#/" data-r="">Heute</a>
+    <a href="#/practice" data-r="practice">Üben</a>
+    <a href="#/lesen" data-r="lesen">Lesen</a>
+    <a href="#/sprechen" data-r="sprechen">Sprechen</a>
+    <a href="#/spick" data-r="spick">Spickzettel</a>
+    <a href="#/chat" data-r="chat">Plaudern</a>
+    <a href="#/texts" data-r="texts">Texte</a>
+    <a href="#/settings" data-r="settings">Einstellungen</a>
+  </nav>
+  <button class="btn wortbtn" id="wortbtn" title="Ein Wort merken">＋ Wort</button>
+</header>
+<dialog id="wd"><h3>Wort merken</h3><p class="muted small" style="margin:4px 0 10px">Gehört oder gelesen? Schreib es kurz auf. Es kommt beim nächsten Üben dran, erst erklärt, dann getestet.</p>
+  <input type="text" id="wtext" placeholder="Wort oder Satzteil" autocomplete="off" spellcheck="false">
+  <input type="text" id="wnote" placeholder="Wo gehört? (optional)" autocomplete="off" style="margin-top:8px">
+  <div class="row" style="margin-top:12px"><button class="btn primary" id="wsave">Merken</button><button class="btn ghost" id="wcancel">Abbrechen</button></div></dialog>
+<div id="toast" class="toast"></div>
+<main class="wrap" id="view"></main>
+<script src="bank.js"></script>
+<script src="engine.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const view=$("#view");
+async function api(path,body){return DE.handle(path,body);}
+let S=null, plan=null, steps=[], si=0, qi=0, lastFeedback="", chat=[], finished=true, mode="full", bonusRead=false;
+function mascot(mood){
+  const eyes={happy:["M21 33q3-4 6 0","M37 33q3-4 6 0"],oops:null,think:null};
+  let face;
+  if(mood==="happy")face=`<path d="M20 34q4-5 8 0M36 34q4-5 8 0" stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="19" cy="42" r="3" fill="#ff9aa2" opacity=".8"/><circle cx="45" cy="42" r="3" fill="#ff9aa2" opacity=".8"/>`;
+  else if(mood==="oops")face=`<circle cx="24" cy="34" r="6" fill="#fff" stroke="var(--ink)" stroke-width="2.5"/><circle cx="40" cy="34" r="6" fill="#fff" stroke="var(--ink)" stroke-width="2.5"/><circle cx="24" cy="36" r="2.5" fill="var(--ink)"/><circle cx="40" cy="36" r="2.5" fill="var(--ink)"/><path d="M17 26l8 3M47 26l-8 3" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>`;
+  else face=`<circle cx="24" cy="34" r="6" fill="#fff" stroke="var(--ink)" stroke-width="2.5"/><circle cx="40" cy="34" r="6" fill="#fff" stroke="var(--ink)" stroke-width="2.5"/><circle cx="26" cy="33" r="2.5" fill="var(--ink)"/><circle cx="42" cy="33" r="2.5" fill="var(--ink)"/>`;
+  return `<svg class="mascot" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 18l9 8M50 18l-9 8" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><ellipse cx="32" cy="38" rx="22" ry="20" fill="var(--accent)" stroke="var(--ink)" stroke-width="3"/>${face}<path d="M28 42l4 6 4-6z" fill="var(--sun)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/></svg>`;
+}
+function setMascot(m){const e=$("#mascot");if(e)e.innerHTML=mascot(m);}
+let toastT;function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2600);}
+const ttsOk=()=>"speechSynthesis" in window;
+function speak(text){
+  if(!ttsOk())return toast("Vorlesen geht hier nicht.");
+  const v=speechSynthesis.getVoices().find(v=>/^de/i.test(v.lang));
+  if(!v&&speechSynthesis.getVoices().length)return toast("Keine deutsche Stimme auf diesem Computer gefunden.");
+  const u=new SpeechSynthesisUtterance(text);u.lang="de-DE";if(v)u.voice=v;u.rate=.92;speechSynthesis.cancel();speechSynthesis.speak(u);
+}
+const spk=(id)=>ttsOk()?`<button class="btn ghost" type="button" data-speak="${id}" title="Vorlesen">🔊</button>`:"";
+$("#wortbtn").onclick=()=>{$("#wd").showModal();$("#wtext").focus();};
+$("#wcancel").onclick=()=>$("#wd").close();
+$("#wsave").onclick=async()=>{const t=$("#wtext").value.trim();if(!t)return;
+  try{await api("/api/word",{text:t,note:$("#wnote").value});$("#wtext").value="";$("#wnote").value="";$("#wd").close();toast("Gemerkt ✓ Kommt beim nächsten Üben dran.");}catch(e){toast(e.message);}};
+$("#wtext").addEventListener("keydown",e=>{if(e.key==="Enter")$("#wsave").click();});
+const PRAISE=["Genau!","Stark!","Sitzt!","Richtig!","Gut gemacht!","Das war’s!","Ja!"];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+function go(h){ if(location.hash===h)route(); else location.hash=h; }
+
+function keys(){return `<div class="keys">${["ä","ö","ü","ß","Ä","Ö","Ü"].map(k=>`<button type="button" data-k="${k}">${k}</button>`).join("")}</div>`;}
+function wireKeys(){
+  document.querySelectorAll(".keys button").forEach(b=>b.onclick=()=>{
+    const el=["INPUT","TEXTAREA"].includes(document.activeElement.tagName)?document.activeElement:window._lastField;
+    if(!el)return; const s=el.selectionStart??el.value.length; el.setRangeText(b.dataset.k,s,el.selectionEnd??s,"end"); el.focus();
+  });
+  document.querySelectorAll("input[type=text],textarea").forEach(e=>e.addEventListener("focus",()=>window._lastField=e));
+}
+function setNav(r){document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.dataset.r===r));}
+
+/* ---------- routing ---------- */
+async function route(){
+  const h=(location.hash||"#/").replace(/^#\/?/,"");
+  const [r,arg,...rest]=h.split("/");
+  setNav(r||"");
+  window.scrollTo(0,0);
+  try{
+    if(r==="practice")return practice();
+    if(r==="spick")return spickView(arg);
+    if(r==="lesen")return lesenView(arg,rest[0]);
+    if(r==="sprechen")return sprechenView();
+    if(r==="chat")return chatView();
+    if(r==="texts")return textsView();
+    if(r==="settings")return settingsView();
+    return await dash();
+  }catch(e){view.innerHTML=`<div class="card err">${esc(e.message)}</div>`;}
+}
+window.addEventListener("hashchange",route);
+
+/* ---------- dashboard ---------- */
+const ST={neu:["neu","🌱 neu"],ueben:["ueben","🔨 am Üben"],sitzt:["sitzt","✅ sitzt"]};
+async function dash(){
+  S=await api("/api/state");
+  const hr=new Date().getHours();
+  const hello=hr<11?"Guten Morgen":hr<18?"Guten Tag":"Guten Abend";
+  const days=new Set(S.days), wd=["So","Mo","Di","Mi","Do","Fr","Sa"];
+  const strip=[...Array(14)].map((_,i)=>{const d=new Date();d.setDate(d.getDate()-13+i);const on=days.has(d.toLocaleDateString("sv"));
+    return `<div class="day ${on?"on":""} ${i===13?"today":""}"><i></i>${wd[d.getDay()]}</div>`}).join("");
+  const rec=S.stations.find(s=>s.n===S.recommended)||S.stations[0];
+  const resume=plan&&!finished;
+  view.innerHTML=`
+  <h1 class="hello">${hello}!</h1>
+  <p class="muted" style="margin:0">${S.practiced_today?"Heute hast du schon geübt. Alles, was jetzt kommt, ist Bonus.":"Fang klein an. Eine Aufgabe zählt schon."}</p>
+  <div class="card hero"><div class="hero-row"><span id="mascot">${mascot(S.practiced_today?"happy":"think")}</span><div style="flex:1">
+    <div class="small muted">${resume?"Du warst mittendrin":"Als Nächstes dran"}</div>
+    <h2 style="font-size:1.8rem;margin:2px 0 14px">${esc(resume?plan.title:rec.title)}</h2>
+    ${resume?`<div class="row"><button class="btn primary big" id="resume">Weitermachen</button></div>`
+      :`<div class="small muted" style="margin-bottom:8px">Wie viel Energie hast du gerade?</div>
+        <div class="row"><button class="btn big" id="e1">😴 Wenig<br><span class="small">2 Minuten</span></button>
+        <button class="btn primary big" id="e2">🙂 Normal<br><span class="small">15 Minuten</span></button>
+        <button class="btn big" id="e3">⚡ Viel<br><span class="small">15 Min + Lesen</span></button></div>`}
+    ${S.waiting&&!resume?`<div class="small muted" style="margin-top:12px">⏰ Ein paar Aufgaben von früher warten auf dich.</div>`:""}
+  </div></div></div>
+  <div class="card"><h3>Die letzten 14 Tage</h3><div class="dots">${strip}</div></div>
+  ${S.weak.length?`<div class="card"><h3>Dranbleiben</h3><p class="muted small" style="margin:4px 0 10px">Hier hakt es gerade. Das ist normal, und genau dafür ist das hier da.</p>
+    <div class="chips">${S.weak.map(w=>`<button class="chip" data-w="${w.station}">${esc(w.name)} üben</button>`).join("")}</div></div>`:""}
+  <div class="card"><details><summary>Alle Themen</summary><div class="grid">
+    ${S.stations.map(s=>{const t=ST[S.status[s.n]]||ST.neu;return `<button class="st" data-n="${s.n}"><b>${s.n} · ${esc(s.title)}</b><span class="tag ${t[0]}">${t[1]}</span></button>`}).join("")}
+  </div></details></div>
+  ${S.parts.length?`<div class="card"><h3>Zuletzt geschrieben</h3>${S.parts.slice(0,2).map(p=>`<div class="text-item"><div class="small muted">${esc(p.date)} · ${esc(p.task)}</div><div>${esc(p.text.slice(0,140))}${p.text.length>140?" …":""}</div></div>`).join("")}
+    <div style="margin-top:10px"><a href="#/texts">Alle meine Texte →</a></div></div>`:""}
+  <p class="muted small">Alles bleibt auf diesem Gerät. ${S.ai_ready?"Claude hilft bei Korrekturen.":"Für Claude-Hilfe: <a href=\"#/settings\">Schlüssel in den Einstellungen</a>."}</p>`;
+  if($("#e1"))$("#e1").onclick=()=>begin(rec.n,"mini");
+  if($("#e2"))$("#e2").onclick=()=>begin(rec.n,"full");
+  if($("#e3"))$("#e3").onclick=()=>begin(rec.n,"full",true);
+  if($("#resume"))$("#resume").onclick=()=>go("#/practice");
+  document.querySelectorAll(".st").forEach(b=>b.onclick=()=>begin(+b.dataset.n,"full"));
+  document.querySelectorAll(".chip[data-w]").forEach(b=>b.onclick=()=>begin(+b.dataset.w,"full"));
+}
+
+/* ---------- Spickzettel (one scroll, no box inside the page) ---------- */
+function mountSpick(anchor){
+  const f=$("#sf"); if(!f)return;
+  f.onload=()=>{
+    const d=f.contentDocument; if(!d)return;
+    const st=d.createElement("style");
+    st.textContent="nav.jump{display:none!important}html,body{overflow:hidden!important;height:auto!important}body{padding-block:0!important}h1,.tag{display:none}";
+    d.head.appendChild(st);
+    const fit=()=>{f.style.height=d.documentElement.scrollHeight+"px";};
+    fit(); try{new f.contentWindow.ResizeObserver(fit).observe(d.body);}catch(e){setInterval(fit,800);}
+    const chips=[...d.querySelectorAll("nav.jump a")].map(a=>[a.getAttribute("href").slice(1),a.textContent.trim()]);
+    const box=$("#schips"); if(box){box.innerHTML=chips.map(([id,t])=>`<button class="chip" data-a="${esc(id)}">${esc(t)}</button>`).join("");
+      box.querySelectorAll(".chip").forEach(c=>c.onclick=()=>jump(c.dataset.a));}
+    if(anchor)setTimeout(()=>jump(anchor),60);
+  };
+}
+function jump(id){
+  const f=$("#sf"),el=f&&f.contentDocument&&f.contentDocument.getElementById(id); if(!el)return;
+  window.scrollTo({top:f.getBoundingClientRect().top+window.scrollY+el.getBoundingClientRect().top-64,behavior:"smooth"});
+}
+function spickView(anchor){
+  view.innerHTML=`<h1>Spickzettel</h1><p class="muted">Spring direkt zu einem Thema:</p><div class="chips" id="schips" style="margin-bottom:14px"></div>
+  <iframe class="spick" id="sf" src="spickzettel.html" title="Spickzettel" scrolling="no"></iframe>`;
+  mountSpick(anchor);
+}
+
+/* ---------- session ---------- */
+async function begin(n,m,bonus){
+  bonusRead=!!bonus;
+  view.innerHTML=`<div class="card muted">Einen Moment …</div>`;
+  try{if(!S)S=await api("/api/state");plan=await api("/api/session",{station:n});}catch(e){view.innerHTML=`<div class="card err">${esc(e.message)}</div>`;return;}
+  mode=m;finished=false;lastFeedback="";
+  if(m==="mini"){
+    const items=plan.warm.slice(0,2).concat(plan.gaps.slice(0,Math.max(1,3-Math.min(2,plan.warm.length))));
+    steps=[{t:"qs",label:"Kurzrunde",items},{t:"close",label:"Fertig"}];
+  }else{
+    steps=[{t:"read",label:"Lesen"}];
+    if(plan.warm.length)steps.push({t:"qs",label:"Aufwärmen",items:plan.warm});
+    steps.push({t:"qs",label:"Lücken",items:plan.gaps,more:true},{t:"nouns",label:"Wörter"});
+    if(plan.words.length)steps.push({t:"words",label:"Deine Wörter"});
+    steps.push({t:"partb",label:"Schreiben"},{t:"close",label:"Fertig"});
+  }
+  si=0;qi=0;go("#/practice");
+}
+async function practice(){
+  if(!S)S=await api("/api/state");
+  if(!plan||finished){return begin(S.recommended||15,"full");}
+  render();
+}
+function segBar(){
+  return `<div class="seg">${steps.map((s,i)=>`<i class="${i<si?"done":i===si?"cur":""}"></i>`).join("")}</div>
+  <div class="segl">${steps.map((s,i)=>`<span class="${i===si?"cur":""}">${s.label}</span>`).join("")}</div>`;
+}
+function next(){si++;qi=0;render();window.scrollTo(0,0);}
+function render(){
+  window.scrollTo(0,0);
+  const s=steps[si];
+  const head=`<div class="small muted" style="margin-bottom:8px">${esc(plan.title)}${mode==="mini"?" · Kurzrunde":""}</div>`+segBar();
+  if(s.t==="read")return readStep(head);
+  if(s.t==="qs")return qStep(head,s);
+  if(s.t==="nouns")return nounStep(head);
+  if(s.t==="words")return wordsStep(head);
+  if(s.t==="partb")return partStep(head);
+  return closeStep(head);
+}
+function readStep(head){
+  view.innerHTML=head+`<h2>Erst lesen</h2><p class="muted">Lies „${esc(plan.title)}“. Danach kommen ein paar Lücken, ohne Zeitdruck. Du musst nicht alles behalten.</p>
+  <iframe class="spick" id="sf" src="spickzettel.html" title="Spickzettel" scrolling="no"></iframe>
+  <div class="sticky"><button class="btn primary big" id="nx">Gelesen, weiter</button><button class="btn ghost" id="sk">Überspringen</button></div>`;
+  mountSpick(plan.read[0]);
+  $("#nx").onclick=next;$("#sk").onclick=next;
+}
+function qStep(head,s){
+  if(qi>=s.items.length){
+    view.innerHTML=head+`<div class="card"><h2>${esc(s.label)} geschafft ✨</h2><p class="muted">${s.more&&S.ai_ready?"Noch Lust? Claude schreibt dir neue Lücken zu diesem Thema.":"Weiter geht’s."}</p>
+    <div class="row"><button class="btn primary big" id="nx">Weiter</button>${s.more&&S.ai_ready?`<button class="btn" id="more">Mehr von Claude</button>`:""}</div><div id="msg"></div></div>`;
+    $("#nx").onclick=next;$("#nx").focus();
+    if($("#more"))$("#more").onclick=async()=>{
+      $("#more").disabled=true;$("#msg").innerHTML=`<p class="muted">Claude überlegt sich Aufgaben …</p>`;
+      try{const r=await api("/api/ai/more",{station:plan.station});s.items=s.items.concat(r.items);render();}
+      catch(e){$("#msg").innerHTML=`<p class="err">${esc(e.message)}</p>`;$("#more").disabled=false;}
+    };
+    return;
+  }
+  const it=s.items[qi];
+  view.innerHTML=head+`<div class="card"><div class="row" style="justify-content:space-between"><div class="muted small">${esc(s.label)} · ${qi+1} von ${s.items.length}</div><span id="mascot">${mascot("think")}</span></div>
+  <div class="prompt">${esc(it.prompt)}</div>
+  <input type="text" id="ans" autocomplete="off" spellcheck="false" placeholder="Antwort in einer Zeile" lang="de">${keys()}
+  <div class="row"><button class="btn primary" id="chk">Prüfen</button><button class="btn" id="hint">💡 Hinweis</button><button class="btn ghost" id="skip">Weiß ich nicht</button></div><div id="hintbox"></div><div id="fb"></div></div>`;
+  wireKeys();const inp=$("#ans");inp.focus();
+  let done=false,busy=false,hintLevel=0;
+  $("#hint").onclick=async()=>{
+    if(done)return;hintLevel++;
+    try{const h=await api("/api/hint",{id:it.id,level:hintLevel});
+      $("#hintbox").innerHTML+=`<div class="fb good" style="background:var(--sun-soft);border-color:var(--ink)">💡 ${esc(h.text)}</div>`;
+      if(!h.more&&hintLevel>=2)$("#hint").disabled=true;
+    }catch(e){$("#hintbox").innerHTML+=`<div class="err">${esc(e.message)}</div>`;}
+    inp.focus();
+  };
+  async function check(giveUp){
+    if(done)return next_q();
+    if(busy)return;
+    const given=giveUp?"":inp.value; if(!giveUp&&!given.trim())return;
+    busy=true;
+    let r;try{r=await api("/api/check",{id:it.id,answer:given});}catch(e){busy=false;$("#fb").innerHTML=`<div class="fb bad">${esc(e.message)}</div>`;return;}
+    done=true;busy=false;inp.disabled=true;$("#skip").style.display="none";$("#hint").style.display="none";setMascot(r.ok?"happy":"oops");$("#chk").textContent="Weiter";
+    $("#fb").innerHTML=r.ok?`<div class="fb good"><b>${pick(PRAISE)}</b>${esc(r.note||r.why)}</div>`
+      :`<div class="fb bad"><b>${giveUp?"Kein Problem.":"Fast."} Richtig ist: ${esc(r.answer)}</b>${esc(r.why)}<div class="small" style="margin-top:6px">Kommt morgen nochmal. Fehler sind hier nur Daten.</div></div>
+      ${S.ai_ready?`<div class="row" style="margin-top:10px"><button class="btn" id="exp">Erklär mir das</button></div><div id="aiout"></div>`:""}`;
+    if($("#exp"))$("#exp").onclick=async()=>{const b=$("#exp"),o=$("#aiout");b.disabled=true;o.innerHTML=`<div class="ai muted">Claude erklärt …</div>`;
+      let h;try{const x=await api("/api/ai/explain",{id:it.id,given});h=`<div class="ai">${esc(x.text)}</div>`;}catch(e){h=`<div class="err">${esc(e.message)}</div>`;}
+      if(document.body.contains(o))o.innerHTML=h;if(document.body.contains(b))b.disabled=false;};
+    $("#chk").focus();
+  }
+  function next_q(){qi++;render();}
+  $("#chk").onclick=()=>check(false);$("#skip").onclick=()=>check(true);
+  inp.addEventListener("keydown",e=>{if(e.key==="Enter")check(false);});
+}
+function wordsStep(head){
+  const ws=plan.words;
+  view.innerHTML=head+`<h2>Deine Wörter</h2><p class="muted">Die hast du selbst gesammelt. Lies sie kurz und sag sie laut.</p>
+  <div class="card gl">${ws.map(w=>{const g=w.gloss;return `<div class="g"><b>${esc(g&&g.de?g.de:w.text)}</b>${g&&g.plural?` · Plural: die ${esc(g.plural.replace(/^die\s+/i,""))}`:""}${g&&g.en?`<div class="muted">${esc(g.en)}</div>`:""}${g&&g.example?`<div><i>${esc(g.example)}</i></div>`:""}${w.note?`<div class="muted small">Notiz: ${esc(w.note)}</div>`:""}</div>`}).join("")}</div>
+  <div class="sticky"><button class="btn primary big" id="nx">Gelernt, weiter</button></div>`;
+  $("#nx").onclick=async()=>{await api("/api/words/taught",{ids:ws.map(w=>w.id)});next();};
+}
+function nounStep(head){
+  const n=plan.nouns;
+  if(!n.taught){
+    view.innerHTML=head+`<h2>Neue Wörter: ${esc(n.set)}</h2><p class="muted">Lies sie und sag sie laut. Noch kein Test. Sag jedes in drei Phrasen: <i>der Laptop, ein neuer Laptop, mit dem Laptop.</i></p>
+    <div class="card"><div class="tlist">${n.teach.map(t=>`<div class="trow"><div><span class="${t.art}">${t.art}</span> <b>${esc(t.sg)}</b></div><div>${t.pl?"die "+esc(t.pl):"kein Plural"}</div><div class="te">${esc(t.en)}</div><div class="th">${esc(t.why)}</div></div>`).join("")}</div></div>
+    <div class="sticky"><button class="btn primary big" id="ready">Bereit zum Testen</button><button class="btn ghost" id="sk">Heute überspringen</button></div>`;
+    $("#ready").onclick=()=>{n.taught=true;render();};$("#sk").onclick=next;return;
+  }
+  view.innerHTML=head+`<h2>Und jetzt du</h2><p class="muted">Artikel oder Plural, je eine Zeile. Enter springt weiter.</p>
+  <div class="card">${n.test.map((t,i)=>`<div class="nrow"><div>${esc(t.prompt)}</div><input type="text" data-i="${i}" autocomplete="off" spellcheck="false"><div class="res" id="r${i}"></div></div>`).join("")}
+  ${keys()}</div>
+  <div class="sticky"><button class="btn primary big" id="chk">Prüfen</button></div><div id="after"></div>`;
+  wireKeys();const inputs=[...document.querySelectorAll(".nrow input")];inputs[0].focus();
+  inputs.forEach((e,i)=>e.addEventListener("keydown",ev=>{if(ev.key==="Enter"){ev.preventDefault();(inputs[i+1]||$("#chk")).focus();}}));
+  $("#chk").onclick=async()=>{
+    $("#chk").disabled=true;
+    for(const e of inputs){const i=+e.dataset.i,t=n.test[i];
+      const r=await api("/api/check",{id:t.id,answer:e.value});e.disabled=true;
+      $("#r"+i).innerHTML=r.ok?`<span class="ok">✓ ${pick(PRAISE)}</span> ${esc(r.note||"")}`:`<span class="no">${esc(r.answer)}</span> <span class="muted">${esc(r.why)}</span>`;}
+    const b=$("#chk");b.disabled=false;b.textContent="Weiter zum Schreiben";b.onclick=next;b.focus();
+  };
+}
+function partStep(head){
+  const p=plan.partb;
+  const qs=p.questions?`<ol>${p.questions.map(q=>`<li>${esc(q)}</li>`).join("")}</ol><div class="chips small" style="margin-bottom:10px">${p.timebuyers.map(t=>`<span class="chip" style="cursor:default">${esc(t)}</span>`).join("")}</div>`:"";
+  view.innerHTML=head+`<h2>${esc(p.title)}</h2><p>${esc(p.instruction)}</p>${qs}
+  <textarea id="txt" spellcheck="false" lang="de" placeholder="Schreib hier. Fehler sind völlig okay. Ein Satz reicht schon."></textarea>${keys()}
+  <div id="out"></div>
+  <div class="sticky"><button class="btn primary big" id="save">Speichern & weiter</button>
+  ${S.ai_ready?`<button class="btn" id="rev">Mit Claude besprechen</button><button class="btn" id="mine">Aus meinen Fehlern üben</button>`:""}<button class="btn ghost" id="cp">Für Claude kopieren</button></div>`;
+  wireKeys();$("#txt").focus();
+  const payload=()=>({task:p.title,instruction:p.instruction+(p.questions?"\n"+p.questions.join("\n"):""),text:$("#txt").value});
+  $("#save").onclick=async()=>{const t=$("#txt").value.trim();if(t){await api("/api/part",{task:p.title,text:t,feedback:lastFeedback});}next();};
+  if($("#rev"))$("#rev").onclick=async()=>{if(!$("#txt").value.trim())return;const out=$("#out"),btn=$("#rev");btn.disabled=true;
+    out.innerHTML=`<div class="ai muted">Claude liest deinen Text … das dauert etwa zehn Sekunden. Du kannst schon weiterschreiben.</div>`;
+    let html;try{const r=await api("/api/ai/review",payload());lastFeedback=r.text;html=`<div class="ai">${esc(r.text)}</div>`;}catch(e){html=`<div class="err">${esc(e.message)}</div>`;}
+    if(document.body.contains(out))out.innerHTML=html;if(document.body.contains(btn))btn.disabled=false;};
+  if($("#mine"))$("#mine").onclick=async()=>{const t=$("#txt").value.trim();if(!t)return;const out=$("#out"),btn=$("#mine");btn.disabled=true;
+    out.innerHTML=`<div class="ai muted">Claude sucht deine echten Fehler … etwa zehn Sekunden.</div>`;
+    let html;try{const r=await api("/api/ai/mine",{text:t});html=`<div class="ai">${r.count?`Gespeichert: ${r.count} neue Aufgaben aus deinen eigenen Fehlern. Sie kommen morgen im Aufwärmen dran.`:"Keine echten Fehler gefunden. Stark!"}</div>`;}catch(e){html=`<div class="err">${esc(e.message)}</div>`;}
+    if(document.body.contains(out))out.innerHTML=html;if(document.body.contains(btn))btn.disabled=false;};
+  $("#cp").onclick=async()=>{const x=payload();const txt=`Du bist mein Deutschlehrer (Ziel B2 bis März 2027). Aufgabe: ${x.task}\n${x.instruction}\n\nMein Text:\n${x.text}\n\nBitte: erst etwas, das gut war, dann die 2 bis 3 wichtigsten Korrekturen mit kurzem Grund. Keine Punkte oder Noten.`;
+    try{await navigator.clipboard.writeText(txt);$("#out").innerHTML=`<div class="ai">Kopiert. Füge es in einen Claude-Chat ein.</div>`;}catch(e){$("#txt").value=txt;$("#txt").select();$("#out").innerHTML=`<div class="ai">Der Text steht jetzt im Feld. Kopiere ihn mit Strg+C.</div>`;}};
+}
+function fill(prompt,answer){
+  const blanks=(prompt.match(/___/g)||[]).length, words=answer.split(/\s+/);
+  if(blanks>1&&words.length===blanks){let i=0;return prompt.replace(/___/g,()=>"»"+words[i++]+"«");}
+  return prompt.replace(/___/,"»"+answer+"«");
+}
+function confetti(){
+  const c=document.createElement("div");c.className="confetti";
+  c.innerHTML=[...Array(26)].map(()=>`<span style="left:${Math.random()*100}%;animation-delay:${Math.random()*0.7}s">${pick(["🎉","✨","⭐","🟡","🟠"])}</span>`).join("");
+  document.body.appendChild(c);setTimeout(()=>c.remove(),3500);
+}
+async function closeStep(head){
+  view.innerHTML=head+`<div class="card muted">Einen Moment …</div>`;
+  const c=await api("/api/close",{});
+  const st=await api("/api/state");
+  const solid=plan.station&&st.status[plan.station]==="sitzt"&&(!S||!S.status||S.status[plan.station]!=="sitzt");
+  S=st;finished=true;confetti();
+  view.innerHTML=head+`<div class="card hero"><div class="hero-row"><span id="mascot">${mascot("happy")}</span><div><h1 style="font-size:2rem">Für heute genug 🎉</h1>${c.praise.map(p=>`<p>${esc(p)}</p>`).join("")}</div></div></div>
+  ${solid?`<div class="card hero"><h2>🏆 ${esc(plan.title)} sitzt jetzt!</h2><p>Dieses Thema hast du fest im Griff. Es kommt nur noch selten zur Wiederholung.</p></div>`:""}
+  ${c.mistakes.length?`<div class="card"><h3>Zum Mitnehmen</h3><ul class="clean">${c.mistakes.map(m=>`<li>${esc(fill(m.prompt,m.answer))}<div class="muted small">${esc(m.why)}</div></li>`).join("")}</ul></div>`:""}
+  <p class="muted">${esc(c.next)}</p><div class="row"><button class="btn ${bonusRead?"primary ":""}big" id="rd">📖 Jetzt lesen</button><button class="btn ${bonusRead?"":"primary "}big" id="h">Zum Dashboard</button></div>`;
+  $("#h").onclick=()=>go("#/");$("#rd").onclick=()=>go("#/lesen");
+}
+
+/* ---------- Texte ---------- */
+async function textsView(){
+  S=await api("/api/state");
+  view.innerHTML=`<h1>Meine Texte</h1><p class="muted">Alles, was du in Teil B geschrieben hast.</p>`+
+    (S.parts.length?`<div class="card">${S.parts.map((p,i)=>`<div class="text-item"><div class="small muted">${esc(p.date)} · ${esc(p.task)}</div><pre>${esc(p.text)}</pre>
+      ${p.feedback?`<details><summary style="font-size:1rem">Feedback von Claude</summary><div class="ai">${esc(p.feedback)}</div></details>`:""}</div>`).join("")}</div>`
+    :`<div class="card muted">Noch nichts da. Teil B der Abendroutine landet hier.</div>`);
+}
+
+/* ---------- chat ---------- */
+function chatView(){
+  const draw=()=>{
+    view.innerHTML=`<h1>Plaudern</h1><p class="muted">Schreib einfach los. Claude antwortet einfach und korrigiert höchstens zwei Dinge am Ende.</p>
+    <div id="log">${chat.map(m=>`<div class="bubble ${m.role==="user"?"me":"bot"}">${esc(m.text)}</div>`).join("")}</div>
+    <input type="text" id="msg" autocomplete="off" spellcheck="false" lang="de" placeholder="Schreib etwas …">${keys()}
+    <div class="row"><button class="btn primary" id="send">Senden</button></div><div id="err"></div>`;
+    wireKeys();$("#msg").focus();
+    const send=async()=>{const v=$("#msg").value.trim();if(!v)return;chat.push({role:"user",text:v});draw();
+      $("#log").insertAdjacentHTML("beforeend",`<div class="bubble bot muted">…</div>`);$("#send").disabled=true;
+      try{const r=await api("/api/ai/chat",{history:chat});chat.push({role:"assistant",text:r.text});}catch(e){draw();if($("#err"))$("#err").innerHTML=`<p class="err">${esc(e.message)}</p>`;return;}
+      if(location.hash==="#/chat")draw();};
+    $("#send").onclick=send;$("#msg").addEventListener("keydown",e=>{if(e.key==="Enter")send();});
+  };
+  draw();
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-speak]");if(b)speak(b.dataset.speak==="@"?(window._speakText||""):b.dataset.speak);});
+
+/* ---------- Sprechen: sofort antworten ---------- */
+let sp=null;
+function sprechenView(){
+  sp=null;
+  api("/api/state").then(st=>{S=st;
+    view.innerHTML=`<h1>Sprechen</h1><p class="muted">Dein Problem ist nicht die Grammatik, sondern das Einfrieren, wenn jemand wartet. Hier übst du genau das, ohne dass jemand zuschaut.</p>
+    <div class="card"><h3>So geht’s</h3><ol class="clean"><li>Lies die Frage. Du kannst sie dir vorlesen lassen 🔊.</li><li>Sag die Antwort <b>laut</b>, auch wenn sie nicht perfekt ist.</li><li>Dann tippe, was du gesagt hast.</li></ol>
+      <p class="muted small">Zeit gewinnen ist erlaubt, das machen auch Muttersprachler: ${S.timebuyers.slice(0,3).map(t=>`<i>${esc(t)}</i>`).join(" · ")}</p>
+      <label class="row" style="margin:10px 0"><input type="checkbox" id="usetimer" checked> <span>Mit sanftem Zeit-Balken (15 Sekunden)</span></label>
+      <button class="btn primary big" id="gosp">Fünf Fragen</button></div>`;
+    $("#gosp").onclick=()=>{const qs=[...S.spontan].sort(()=>Math.random()-.5).slice(0,5);sp={qs,i:0,answers:[],timer:$("#usetimer").checked};spRound();};
+  });
+}
+function spRound(){
+  if(sp.i>=sp.qs.length)return spSummary();
+  const q=sp.qs[sp.i];window._speakText=q;
+  view.innerHTML=`<div class="seg">${sp.qs.map((_,i)=>`<i class="${i<sp.i?"done":i===sp.i?"cur":""}"></i>`).join("")}</div>
+  <div class="card"><div class="row" style="justify-content:space-between"><div class="muted small">Frage ${sp.i+1} von ${sp.qs.length}</div><span id="mascot">${mascot("think")}</span></div>
+  <div class="prompt">${esc(q)} ${spk("@")}</div>
+  ${sp.timer?`<div class="timer"><i id="tbar"></i></div><div class="small muted" id="tmsg">Sag es jetzt laut …</div>`:""}
+  <input type="text" id="ans" autocomplete="off" spellcheck="false" placeholder="Was du gesagt hast, hier tippen" lang="de">${keys()}
+  <div class="chips small" style="margin:6px 0 12px">${S.timebuyers.map(t=>`<button class="chip" type="button" data-tb="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+  <div class="row"><button class="btn primary" id="nx">Weiter</button><button class="btn ghost" id="pass">Überspringen</button></div></div>`;
+  wireKeys();const inp=$("#ans");inp.focus();
+  document.querySelectorAll("[data-tb]").forEach(b=>b.onclick=()=>{inp.value=(inp.value?inp.value+" ":"")+b.dataset.tb+" ";inp.focus();});
+  if(sp.timer){const bar=$("#tbar");bar.style.animationDuration="15s";requestAnimationFrame(()=>bar.classList.add("run"));
+    clearTimeout(sp.t);sp.t=setTimeout(()=>{const m=$("#tmsg");if(m)m.textContent="Zeit um. Kein Stress: schreib zu Ende, wie es sich anfühlt, ist das Ziel.";},15000);}
+  const adv=(save)=>{clearTimeout(sp.t);if(save&&inp.value.trim())sp.answers.push({q,a:inp.value.trim()});sp.i++;spRound();};
+  $("#nx").onclick=()=>adv(true);$("#pass").onclick=()=>adv(false);
+  inp.addEventListener("keydown",e=>{if(e.key==="Enter")adv(true);});
+}
+function spSummary(){
+  const text=sp.answers.map(x=>x.q+"\n"+x.a).join("\n\n");
+  view.innerHTML=`<div class="card hero"><div class="hero-row"><span id="mascot">${mascot("happy")}</span><div><h1 style="font-size:1.8rem">Geschafft 🎉</h1><p>Du hast geantwortet, ohne zu warten, bis es perfekt ist. Genau das trainiert das Sprechen.</p></div></div></div>
+  ${sp.answers.length?`<div class="card">${sp.answers.map(x=>`<div class="text-item"><div class="small muted">${esc(x.q)}</div><div>${esc(x.a)}</div></div>`).join("")}</div>`:""}
+  <div id="out"></div><div class="row"><button class="btn primary big" id="save">Speichern</button>${S.ai_ready&&sp.answers.length?`<button class="btn" id="rev">Mit Claude besprechen</button>`:""}<button class="btn ghost" id="again">Nochmal</button></div>`;
+  confetti();
+  $("#save").onclick=async()=>{if(sp.answers.length)await api("/api/part",{task:"Sofort-Antwort",text});toast("Gespeichert in „Texte“");go("#/");};
+  $("#again").onclick=()=>sprechenView();
+  if($("#rev"))$("#rev").onclick=async()=>{const b=$("#rev"),o=$("#out");b.disabled=true;o.innerHTML=`<div class="ai muted">Claude liest …</div>`;
+    let h;try{const r=await api("/api/ai/review",{task:"Sofort-Antwort (spontane Fragen, schnell getippt)",instruction:"Antworten auf spontane Fragen",text});h=`<div class="ai">${esc(r.text)}</div>`;}catch(e){h=`<div class="err">${esc(e.message)}</div>`;}
+    if(document.body.contains(o))o.innerHTML=h;if(document.body.contains(b))b.disabled=false;};
+}
+
+/* ---------- Lesen: Prosa mit Wörtern vorab und Fragen danach ---------- */
+async function lesenView(tid,idx){
+  if(tid)return passageView(tid,+idx||0);
+  const r=await api("/api/texts");
+  view.innerHTML=`<h1>Lesen</h1><p class="muted">Kurze Abschnitte aus Büchern. Erst die Wörter, dann der Text, dann Fragen mit Musterantworten. Wie in der Schule, nur ohne Noten.</p>
+  ${r.texts.length?`<div class="lib">${r.texts.map(t=>`<div class="card" style="margin:0"><h3>${esc(t.title)} <span class="pill">${esc(t.level)}</span></h3>
+    <p class="muted small" style="margin:6px 0 12px">${t.done?`${t.done} von ${t.passages} Abschnitten gelesen`:`${t.passages} Abschnitte, noch nicht angefangen`}${t.level==="schwer"?"<br>Schwer: Claude schreibt dir auch eine einfache Fassung.":""}</p>
+    <button class="btn primary" data-t="${t.id}" data-i="${t.next}">${t.done?"Weiterlesen":"Anfangen"}</button></div>`).join("")}</div>`
+   :`<div class="card muted">Noch keine Texte. Füge unten einen Text ein oder lade eine .txt-Datei hoch.</div>`}
+  <div class="card"><details><summary>Text einfügen</summary><input type="text" id="ttitle" placeholder="Titel, z. B. Der Froschkönig" style="margin:12px 0 8px">
+    <textarea id="tbody" placeholder="Text hier einfügen …"></textarea><div class="row" style="margin-top:10px"><button class="btn primary" id="tsave">Speichern</button></div><div id="tmsg"></div></details>
+    <div style="margin-top:12px"><input type="file" id="tfile" accept=".txt,.md,text/plain"></div></div>`;
+  $("#tfile").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{await api("/api/text/add",{title:f.name.replace(/\.[^.]+$/,""),text:await f.text()});toast("Gespeichert");lesenView();}catch(x){$("#tmsg").innerHTML=`<p class="err">${esc(x.message)}</p>`;}};
+  document.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>go(`#/lesen/${b.dataset.t}/${b.dataset.i}`));
+  $("#tsave").onclick=async()=>{try{await api("/api/text/add",{title:$("#ttitle").value,text:$("#tbody").value});toast("Gespeichert");lesenView();}catch(e){$("#tmsg").innerHTML=`<p class="err">${esc(e.message)}</p>`;}};
+}
+let rd=null;
+async function passageView(tid,idx){
+  const p=await api("/api/passage",{id:tid,idx});
+  rd={p,tid,idx,qi:0,ex:p.exercises,simple:false};
+  S=S||await api("/api/state");
+  drawPassage();
+}
+function drawPassage(){
+  const {p,ex}=rd;window._speakText=(rd.simple&&ex&&ex.simple)?ex.simple:p.text;
+  view.innerHTML=`<div class="small muted">${esc(p.title)} · Abschnitt ${p.idx+1} von ${p.total} · <a href="#/lesen">Bibliothek</a></div>
+  ${ex&&ex.simple?`<div class="tabs" style="margin-top:10px"><button class="chip ${rd.simple?"":"on"}" id="t1" style="${rd.simple?"":"background:var(--sun)"}">Original</button><button class="chip" id="t2" style="${rd.simple?"background:var(--sun)":""}">Einfache Fassung</button></div>`:""}
+  <div id="glwrap"></div>
+  <div class="card"><div class="passage">${esc((rd.simple&&ex&&ex.simple)?ex.simple:p.text)}</div><div class="row" style="margin-top:12px">${spk("@")}</div></div>
+  <div id="exwrap"></div>`;
+  if($("#t1")){$("#t1").onclick=()=>{rd.simple=false;drawPassage();};$("#t2").onclick=()=>{rd.simple=true;drawPassage();};}
+  if(ex)return drawEx();
+  $("#exwrap").innerHTML=S.ai_ready?`<div class="card hero"><h3>Erst die Wörter, dann die Fragen</h3><p class="muted">Claude sucht schwierige Wörter aus dem Abschnitt und schreibt Fragen mit Musterantworten.${p.level==="schwer"?" Bei diesem Text gibt es auch eine einfache Fassung.":""} Das dauert etwa eine halbe Minute.</p>
+    <div class="row"><button class="btn primary big" id="mk">Wörter und Fragen erstellen</button></div><div id="mkmsg"></div></div>`
+    :`<div class="card"><p>Für Wörter und Fragen braucht die App Claude: <code>python3 run.py claude-login</code>. Lesen kannst du den Abschnitt trotzdem.</p></div>`;
+  if($("#mk"))$("#mk").onclick=async()=>{$("#mk").disabled=true;$("#mkmsg").innerHTML=`<p class="muted">Claude liest den Abschnitt … bitte warten, etwa 30 Sekunden. Lies ihn solange schon einmal.</p>`;
+    try{rd.ex=await api("/api/passage/exercises",{id:rd.tid,idx:rd.idx});drawPassage();}catch(e){$("#mkmsg").innerHTML=`<p class="err">${esc(e.message)}</p>`;$("#mk").disabled=false;}};
+}
+function drawEx(){
+  const {ex}=rd;
+  const gl=ex.glossary.length?`<div class="card"><h2>Erst die Wörter</h2><div class="gl">${ex.glossary.map(g=>`<div class="g"><b>${esc(g.word)}</b><span class="pill">${esc(g.wortart)}</span><div>${esc(g.meaning)}</div>${g.synonym?`<div class="small muted">ähnlich: ${esc(g.synonym)}</div>`:""}${g.antonym?`<div class="small muted">Gegenteil: ${esc(g.antonym)}</div>`:""}</div>`).join("")}</div></div>`:"";
+  $("#glwrap").innerHTML=gl;
+  const q=ex.questions[rd.qi];
+  if(!q){
+    $("#exwrap").innerHTML=`<div class="card hero"><h2>Abschnitt geschafft ✨</h2><p class="muted">Gut gelesen und beantwortet.</p><div class="row">
+      ${rd.idx+1<rd.p.total?`<button class="btn primary big" id="nx">Nächster Abschnitt</button>`:""}<button class="btn big" id="lib">Zur Bibliothek</button></div></div>`;
+    confetti();api("/api/passage/done",{id:rd.tid,idx:rd.idx}).catch(()=>{});
+    if($("#nx"))$("#nx").onclick=()=>go(`#/lesen/${rd.tid}/${rd.idx+1}`);$("#lib").onclick=()=>go("#/lesen");return;
+  }
+  const label={verstehen:"Verstehen",wort:"Wort",grammatik:"Grammatik",schluss:"Nachdenken"}[q.type]||"Frage";
+  $("#exwrap").innerHTML=`<div class="card"><div class="muted small">${label} · Frage ${rd.qi+1} von ${ex.questions.length}</div><div class="prompt" style="font-size:1.35rem">${esc(q.q)}</div>
+    <textarea id="qa" spellcheck="false" lang="de" style="min-height:110px" placeholder="Deine Antwort in ein oder zwei Sätzen"></textarea>${keys()}
+    <div class="row"><button class="btn" id="show">Musterantwort zeigen</button>${S.ai_ready?`<button class="btn" id="judge">Claude schaut drauf</button>`:""}<button class="btn primary" id="nq">Weiter</button></div>
+    <div id="qout"></div></div>`;
+  wireKeys();
+  $("#show").onclick=()=>{$("#qout").innerHTML+=`<div class="fb good"><b>Musterantwort</b>${esc(q.model)}</div>`;$("#show").disabled=true;};
+  if($("#judge"))$("#judge").onclick=async()=>{const a=$("#qa").value.trim();if(!a)return;const b=$("#judge"),o=$("#qout");b.disabled=true;
+    const hold=document.createElement("div");hold.className="ai muted";hold.textContent="Claude liest deine Antwort …";o.appendChild(hold);
+    let h;try{const r=await api("/api/ai/answer",{q:q.q,model:q.model,answer:a});h=`<div class="ai">${esc(r.text)}</div>`;}catch(e){h=`<div class="err">${esc(e.message)}</div>`;}
+    hold.outerHTML=h;if(document.body.contains(b))b.disabled=false;};
+  $("#nq").onclick=()=>{rd.qi++;drawEx();window.scrollTo({top:$("#exwrap").offsetTop-80});};
+}
+
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+route();
+</script>
+</body>
+</html>
